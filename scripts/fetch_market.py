@@ -34,10 +34,10 @@ def get_json(url: str):
 
 
 def yahoo(sym: str):
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=5d&interval=1d"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=1d&interval=1d"
     meta = get_json(url)["chart"]["result"][0]["meta"]
     price = float(meta["regularMarketPrice"])
-    base = float(meta.get("chartPreviousClose") or meta.get("previousClose") or price)
+    base = float(meta.get("previousClose") or meta.get("chartPreviousClose") or price)
     return price, (round((price / base - 1) * 100, 2) if base else 0.0)
 
 
@@ -83,7 +83,7 @@ def main() -> None:
     for serie, jid, nome, unidade in JUROS:
         try:
             d = get_json(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{serie}/dados/ultimos/1?formato=json")[-1]
-            juros.append({"id": jid, "nome": nome, "valor": float(d["valor"]), "unidade": unidade, "ref": d["data"]})
+            juros.append({"id": jid, "nome": nome, "valor": float(d["valor"]), "unidade": unidade, "ref": "vigente" if serie == 432 else d["data"]})
         except Exception as exc:  # noqa: BLE001
             print(f"[AVISO] {nome}: {exc}")
             if jid in prev:

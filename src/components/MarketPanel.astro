@@ -35,7 +35,7 @@ const empty = false;
           <div class="mk mk-rate">
             <span class="mk-name">{j.nome}</span>
             <strong class="mk-val">{fmt(j.valor)}<small> {j.unidade}</small></strong>
-            <span class="mk-var neutral">ref. {j.ref}</span>
+            <span class="mk-var neutral">{j.ref === "vigente" ? "taxa vigente" : `ref. ${j.ref}`}</span>
           </div>
         ))}
       </div>
