@@ -27,3 +27,17 @@ const emb = await (await transparent(emblem)).png().toBuffer();
 await sharp(emb).resize(64, 64, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toFile('public/favicon.png');
 await sharp(emb).resize(180, 180, { fit: 'contain', background: '#04070d' }).flatten({ background: '#04070d' }).png().toFile('public/apple-touch-icon.png');
 console.log('Logos gerados em public/');
+
+// Logo para assinatura de e-mail (PNG com fundo escuro e cantos arredondados, 2x)
+mkdirSync('public/email', { recursive: true });
+{
+  const W = 240, H = 240;
+  const logo = await sharp(SRC).extract({ left: 100, top: 110, width: 1054, height: 1000 }).resize(212, 201).png().toBuffer();
+  const mask = Buffer.from(`<svg width="${W}" height="${H}"><rect width="${W}" height="${H}" rx="28" ry="28" fill="#fff"/></svg>`);
+  const bg = Buffer.from(`<svg width="${W}" height="${H}"><defs><radialGradient id="g" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#0d2547"/><stop offset="1" stop-color="#03060c"/></radialGradient></defs><rect width="${W}" height="${H}" fill="url(#g)"/></svg>`);
+  await sharp(bg)
+    .composite([{ input: logo, blend: 'screen', top: 20, left: 14 }, { input: mask, blend: 'dest-in' }])
+    .png({ compressionLevel: 9 })
+    .toFile('public/email/assinatura-logo.png');
+}
+console.log('Logo da assinatura gerado em public/email/');
