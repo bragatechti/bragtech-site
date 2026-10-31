@@ -1,0 +1,29 @@
+# Instalação inicial: extrai bootstrap.zip na raiz do repositório.
+# Roda uma única vez (quando bootstrap.zip é enviado). Pode ser apagado depois.
+name: Bootstrap do projeto
+
+on:
+  push:
+    paths: ['bootstrap.zip']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extrair projeto
+        run: |
+          if [ ! -f bootstrap.zip ]; then echo "Nada a fazer"; exit 0; fi
+          unzip -o bootstrap.zip
+          rm bootstrap.zip
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Projeto BragaTech: estrutura inicial do site" || echo "Sem mudancas"
+          git push
