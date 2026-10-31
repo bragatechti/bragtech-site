@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-31T12:52:00Z",
-  "moedas": [],
+  "updated": "2026-10-31T12:56:28Z",
+  "moedas": [
+    {
+      "id": "USD-BRL",
+      "nome": "Dólar",
+      "valor": 5.4397,
+      "var": 9.67
+    },
+    {
+      "id": "EUR-BRL",
+      "nome": "Euro",
+      "valor": 6.0668,
+      "var": 9.59
+    },
+    {
+      "id": "GBP-BRL",
+      "nome": "Libra",
+      "valor": 7.2814,
+      "var": 9.76
+    }
+  ],
   "bolsas": [
     {
       "id": "^BVSP",
