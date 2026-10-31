@@ -1,0 +1,18 @@
+---
+const { items } = Astro.props;
+const list = items.slice(0, 14);
+---
+{list.length > 0 && (
+  <div class="ticker" aria-label="Últimas notícias">
+    <div class="container">
+      <span class="ticker-label">AO VIVO</span>
+      <div class="ticker-viewport">
+        <div class="ticker-track">
+          {[...list, ...list].map((n: any) => (
+            <a href={n.data.sourceUrl} target="_blank" rel="noopener nofollow"><span>{n.data.source}</span>{n.data.title}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+)}

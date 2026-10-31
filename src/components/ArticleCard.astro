@@ -1,13 +1,15 @@
 ---
+import Thumb from './Thumb.astro';
+import Badge from './Badge.astro';
 import FormattedDate from './FormattedDate.astro';
-import { categoryName } from '../consts';
 const { post } = Astro.props;
 ---
 <article class="card">
-  <div class="meta">
-    <a class="badge" href={`/categoria/${post.data.category}/`}>{categoryName(post.data.category)}</a>
-    <FormattedDate date={post.data.pubDate} />
+  <a href={`/artigos/${post.id}/`} aria-label={post.data.title}><Thumb image={post.data.cover} category={post.data.category} /></a>
+  <div class="card-body">
+    <div class="meta"><Badge category={post.data.category} /><span class="kicker" style="font-size:.65rem">Artigo BragaTech</span></div>
+    <h3><a href={`/artigos/${post.id}/`}>{post.data.title}</a></h3>
+    <p>{post.data.description}</p>
+    <div class="meta"><FormattedDate date={post.data.pubDate} /></div>
   </div>
-  <h3><a href={`/artigos/${post.id}/`}>{post.data.title}</a></h3>
-  <p>{post.data.description}</p>
 </article>

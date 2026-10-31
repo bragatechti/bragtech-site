@@ -2,13 +2,15 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, description, type } = Astro.props;
+const { title, description, type, image } = Astro.props;
 ---
 <!doctype html>
 <html lang="pt-BR">
-  <head><BaseHead title={title} description={description} type={type} /></head>
+  <head><BaseHead title={title} description={description} type={type} image={image} /></head>
   <body>
+    <div class="bg-tech" aria-hidden="true"></div>
     <Header />
+    <slot name="top" />
     <main><slot /></main>
     <Footer />
   </body>

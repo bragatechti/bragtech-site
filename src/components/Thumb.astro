@@ -1,0 +1,14 @@
+---
+import Icon from './Icon.astro';
+import { getCategory } from '../consts';
+interface Props { image?: string; category: string; alt?: string; eager?: boolean; }
+const { image, category, alt = '', eager = false } = Astro.props;
+const cat = getCategory(category);
+const src = image && image.startsWith('https://') ? image : undefined;
+---
+<div class="thumb" style={`--c:${cat.color}`}>
+  <div class="ph-icon"><Icon name={cat.icon} /></div>
+  {src && (
+    <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />
+  )}
+</div>

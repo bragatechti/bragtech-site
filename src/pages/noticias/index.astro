@@ -1,13 +1,46 @@
 ---
 import Base from '../../layouts/Base.astro';
-import NewsList from '../../components/NewsList.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import { CATEGORIES } from '../../consts';
 import { getNoticias } from '../../lib';
 const items = await getNoticias();
 ---
-<Base title="Notícias" description="Notícias de tecnologia, cloud e cibersegurança selecionadas automaticamente de fontes confiáveis.">
-  <section class="container">
-    <h1>Notícias</h1>
-    <p class="meta">Curadoria automática diária. Os links levam às fontes originais.</p>
-    <NewsList items={items} />
-  </section>
+<Base title="Notícias" description="Notícias de IA, cibersegurança, cloud, infraestrutura e tecnologia, atualizadas diariamente.">
+  <div class="container">
+    <div class="page-head">
+      <span class="kicker">Radar BragaTech</span>
+      <h1>Notícias de tecnologia</h1>
+      <p>Curadoria automática, duas vezes por dia, das principais fontes nacionais e internacionais. Os links levam às matérias originais.</p>
+    </div>
+    <div class="filters" id="filters">
+      <label class="sr-only" for="q">Buscar notícias</label>
+      <input id="q" type="search" placeholder="Buscar por palavra-chave, ex.: ransomware, Copilot, Azure…" />
+      <button class="on" data-f="all">Todas</button>
+      {CATEGORIES.map((c) => <button data-f={c.slug} style={`--c:${c.color}`}>{c.short}</button>)}
+    </div>
+    <p class="meta" id="count"></p>
+    <div class="grid" id="news-grid">{items.map((n) => <NewsCard item={n} />)}</div>
+    {items.length === 0 && <p class="meta">Nenhuma notícia coletada ainda.</p>}
+  </div>
 </Base>
+<script>
+  const q = document.getElementById('q') as HTMLInputElement;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('#filters button');
+  const cards = document.querySelectorAll<HTMLElement>('#news-grid .card');
+  const count = document.getElementById('count')!;
+  let cat = new URLSearchParams(location.search).get('cat') || 'all';
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let n = 0;
+    cards.forEach((c) => {
+      const ok = (cat === 'all' || c.dataset.cat === cat) && (!term || (c.dataset.text || '').includes(term));
+      c.style.display = ok ? '' : 'none';
+      if (ok) n++;
+    });
+    buttons.forEach((b) => b.classList.toggle('on', b.dataset.f === cat));
+    count.textContent = `${n} notícia(s)`;
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => { cat = b.dataset.f || 'all'; apply(); }));
+  q.addEventListener('input', apply);
+  apply();
+</script>

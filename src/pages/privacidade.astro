@@ -2,14 +2,16 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Política de Privacidade" description="Política de Privacidade da BragaTech.">
-  <section class="container page">
-    <h1>Política de Privacidade</h1>
-    <p>Este site não exige cadastro e não coleta dados pessoais diretamente dos visitantes.</p>
-    <h2>Cookies e métricas</h2>
-    <p>Podemos utilizar métricas agregadas e anônimas de acesso (por exemplo, Cloudflare Web Analytics, que não usa cookies) para entender o uso do site.</p>
-    <h2>Links externos</h2>
-    <p>A seção de notícias contém links para sites de terceiros, que possuem suas próprias políticas de privacidade.</p>
-    <h2>LGPD</h2>
-    <p>Em caso de dúvidas sobre o tratamento de dados, conforme a Lei nº 13.709/2018 (LGPD), utilize a página de <a href="/contato/">contato</a>.</p>
-  </section>
+  <div class="container narrow">
+    <div class="page-head"><span class="kicker">LGPD</span><h1>Política de Privacidade</h1></div>
+    <div class="prose">
+      <p>Este site não exige cadastro e não coleta dados pessoais diretamente dos visitantes.</p>
+      <h2>Métricas</h2>
+      <p>Podemos utilizar métricas agregadas e anônimas de acesso (por exemplo, Cloudflare Web Analytics, que não usa cookies).</p>
+      <h2>Conteúdo de terceiros</h2>
+      <p>A seção de notícias exibe títulos, resumos e imagens de divulgação fornecidos pelos feeds RSS públicos das fontes, sempre com link para a matéria original. Cada fonte possui sua própria política de privacidade.</p>
+      <h2>Lei Geral de Proteção de Dados</h2>
+      <p>Em caso de dúvidas sobre o tratamento de dados, conforme a Lei nº 13.709/2018 (LGPD), utilize a página de <a href="/contato/">contato</a>.</p>
+    </div>
+  </div>
 </Base>

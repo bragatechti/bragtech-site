@@ -1,11 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { CREATOR } from '../consts';
 ---
 <Base title="Contato" description="Fale com a BragaTech.">
-  <section class="container page">
-    <h1>Contato</h1>
-    <p>Para sugestões de pauta, parcerias ou dúvidas, entre em contato:</p>
-    <p><strong>E-mail:</strong> <a href="mailto:contato@bragagnolo.tec.br">contato@bragagnolo.tec.br</a></p>
-    <p><em>Ajuste o e-mail e adicione suas redes (LinkedIn, GitHub) em <code>src/pages/contato.astro</code>.</em></p>
-  </section>
+  <div class="container narrow">
+    <div class="page-head">
+      <span class="kicker">Contato</span>
+      <h1>Vamos conversar</h1>
+      <p>Sugestões de pauta, parcerias, palestras ou dúvidas sobre infraestrutura, cibersegurança e governança de IA.</p>
+    </div>
+    <div class="grid" style="margin-top:1.5rem">
+      <a class="card" href={CREATOR.linkedin} target="_blank" rel="noopener" style="text-decoration:none"><div class="card-body"><span style="color:var(--blue);width:32px;display:block"><Icon name="linkedin" /></span><h3>LinkedIn</h3><p>Conecte-se e acompanhe as publicações.</p></div></a>
+      <a class="card" href="mailto:contato@bragagnolo.tec.br" style="text-decoration:none"><div class="card-body"><span style="color:var(--orange);width:32px;display:block"><Icon name="mail" /></span><h3>E-mail</h3><p>contato@bragagnolo.tec.br</p></div></a>
+      <a class="card" href="/rss.xml" style="text-decoration:none"><div class="card-body"><span style="color:var(--cyan);width:32px;display:block"><Icon name="rss" /></span><h3>Feed RSS</h3><p>Receba os artigos no seu leitor de RSS.</p></div></a>
+    </div>
+  </div>
 </Base>

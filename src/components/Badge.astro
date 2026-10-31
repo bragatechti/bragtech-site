@@ -1,0 +1,6 @@
+---
+import { getCategory } from '../consts';
+const { category } = Astro.props;
+const c = getCategory(category);
+---
+<a class="badge" href={`/categoria/${c.slug}/`} style={`--c:${c.color}`}>{c.short}</a>

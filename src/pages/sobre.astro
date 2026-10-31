@@ -1,11 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
+import Creator from '../components/Creator.astro';
 ---
-<Base title="Sobre" description="Sobre a BragaTech.">
-  <section class="container page">
-    <h1>Sobre a BragaTech</h1>
-    <p>A <strong>BragaTech</strong> é um portal dedicado a profissionais de TI, com conteúdo sobre cibersegurança, cloud computing e infraestrutura.</p>
-    <p>Aqui você encontra artigos técnicos autorais, tutoriais, análises e uma curadoria diária de notícias das principais fontes do mercado.</p>
-    <p><em>Edite este texto em <code>src/pages/sobre.astro</code> para contar sua trajetória profissional.</em></p>
-  </section>
+<Base title="Sobre" description="Conheça a BragaTech e o seu criador, José Raul Bragagnolo Filho.">
+  <div class="container">
+    <section class="brand-hero" style="padding-bottom:0">
+      <div class="wrap">
+        <div>
+          <span class="kicker">Sobre o portal</span>
+          <h1>Tecnologia que informa. <em>Segurança que protege.</em></h1>
+          <p>A BragaTech reúne, todos os dias, as notícias mais relevantes sobre inteligência artificial, cibersegurança, cloud, infraestrutura e o mercado de tecnologia, com análises práticas de quem coordena ambientes críticos de TI.</p>
+        </div>
+        <img src="/logo-full.webp" alt="Logo BragaTech" width="480" height="425" class="logo-big" />
+      </div>
+    </section>
+    <section><Creator full /></section>
+  </div>
 </Base>

@@ -2,7 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const categoria = z.enum(['ciberseguranca', 'cloud', 'infraestrutura', 'tecnologia']);
+const categoria = z.enum(['ia', 'ciberseguranca', 'cloud', 'infraestrutura', 'tecnologia']);
 
 const artigos = defineCollection({
   loader: glob({ base: './src/content/artigos', pattern: '**/*.{md,mdx}' }),
@@ -13,6 +13,7 @@ const artigos = defineCollection({
     updatedDate: z.coerce.date().optional(),
     category: categoria,
     tags: z.array(z.string()).default([]),
+    cover: z.string().optional(), // URL de imagem (opcional)
     draft: z.boolean().default(false),
   }),
 });
@@ -26,6 +27,7 @@ const noticias = defineCollection({
     category: categoria,
     source: z.string(),
     sourceUrl: z.string().url(),
+    image: z.string().optional(),
   }),
 });
 

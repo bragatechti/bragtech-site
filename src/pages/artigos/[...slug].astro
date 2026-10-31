@@ -1,9 +1,11 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Thumb from '../../components/Thumb.astro';
+import Badge from '../../components/Badge.astro';
+import Creator from '../../components/Creator.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
-import { categoryName } from '../../consts';
-import { getArtigos } from '../../lib';
+import { getArtigos, readingTime } from '../../lib';
 
 export async function getStaticPaths() {
   const posts = await getArtigos();
@@ -11,19 +13,18 @@ export async function getStaticPaths() {
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
+const minutes = readingTime(post.body ?? '');
 ---
-<Base title={post.data.title} description={post.data.description} type="article">
-  <article class="article container">
-    <div class="meta">
-      <a class="badge" href={`/categoria/${post.data.category}/`}>{categoryName(post.data.category)}</a>
-      <FormattedDate date={post.data.pubDate} />
-      {post.data.updatedDate && <span>· atualizado em <FormattedDate date={post.data.updatedDate} /></span>}
+<Base title={post.data.title} description={post.data.description} type="article" image={post.data.cover}>
+  <article class="article">
+    <div class="page-head" style="padding-bottom:0">
+      <div class="meta"><Badge category={post.data.category} /><FormattedDate date={post.data.pubDate} /><span class="dot"></span><span>{minutes} min de leitura</span></div>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
     </div>
-    <h1>{post.data.title}</h1>
-    <p class="meta" style="font-size:1.05rem">{post.data.description}</p>
+    <div class="article-cover"><Thumb image={post.data.cover} category={post.data.category} eager /></div>
     <div class="prose"><Content /></div>
-    {post.data.tags.length > 0 && (
-      <p class="meta" style="margin-top:2rem">Tags: {post.data.tags.map((t) => <span class="badge">{t}</span>)}</p>
-    )}
+    {post.data.tags.length > 0 && <div class="chips" style="margin-top:2rem">{post.data.tags.map((t) => <span class="chip">#{t}</span>)}</div>}
   </article>
+  <section><div class="container narrow"><Creator /></div></section>
 </Base>

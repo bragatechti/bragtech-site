@@ -1,48 +1,109 @@
 ---
 import Base from '../layouts/Base.astro';
+import Ticker from '../components/Ticker.astro';
+import Thumb from '../components/Thumb.astro';
+import Badge from '../components/Badge.astro';
+import NewsCard from '../components/NewsCard.astro';
+import NewsMini from '../components/NewsMini.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import NewsList from '../components/NewsList.astro';
-import { CATEGORIES, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
-import { getArtigos, getNoticias } from '../lib';
+import Creator from '../components/Creator.astro';
+import Icon from '../components/Icon.astro';
+import { CATEGORIES } from '../consts';
+import { getArtigos, getNoticias, timeAgo } from '../lib';
 
-const artigos = (await getArtigos()).slice(0, 6);
-const noticias = (await getNoticias()).slice(0, 10);
+const noticias = await getNoticias();
+const artigos = (await getArtigos()).slice(0, 4);
+const withImg = noticias.filter((n) => n.data.image);
+const featured = withImg[0] ?? noticias[0];
+const side = (withImg.length > 3 ? withImg : noticias).filter((n) => n !== featured).slice(0, 3);
+const used = new Set([featured, ...side]);
+const latest = noticias.filter((n) => !used.has(n)).slice(0, 8);
+const byCat = CATEGORIES.map((c) => ({ c, items: noticias.filter((n) => n.data.category === c.slug).slice(0, 4) }));
+const sources = new Set(noticias.map((n) => n.data.source)).size;
+const lastUpdate = noticias[0]?.data.pubDate;
 ---
 <Base>
-  <section class="hero">
-    <div class="container">
-      <div class="kicker">Tecnologia • Infraestrutura • Cibersegurança</div>
-      <h1>{SITE_TAGLINE}</h1>
-      <p>{SITE_DESCRIPTION}</p>
-      <p style="margin-top:1.5rem"><a class="btn" href="/artigos/">Ler os artigos</a></p>
+  <Ticker slot="top" items={noticias} />
+
+  <section class="brand-hero">
+    <div class="container wrap">
+      <div>
+        <span class="kicker">Tecnologia • Cibersegurança • IA • Cloud</span>
+        <h1>O mundo da tecnologia, <em>em tempo real.</em></h1>
+        <p>Notícias selecionadas das principais fontes do Brasil e do mundo, com análises de quem vive a TI no dia a dia: inteligência artificial, segurança da informação, cloud e infraestrutura.</p>
+      </div>
+      <img src="/logo-full.webp" alt="Logo BragaTech" width="480" height="425" class="logo-big" />
     </div>
   </section>
 
+  {featured && (
+    <section style="padding-top:1rem">
+      <div class="container hero-grid">
+        <article class="feature">
+          <Thumb image={featured.data.image} category={featured.data.category} eager />
+          <div class="feature-body">
+            <div class="meta"><Badge category={featured.data.category} /><span>{featured.data.source}</span><span class="dot"></span><span>{timeAgo(featured.data.pubDate)}</span></div>
+            <h2><a href={featured.data.sourceUrl} target="_blank" rel="noopener nofollow">{featured.data.title}</a></h2>
+            {featured.data.summary && <p>{featured.data.summary}</p>}
+          </div>
+        </article>
+        <div class="side-list">{side.map((n) => <NewsMini item={n} />)}</div>
+      </div>
+    </section>
+  )}
+
   <section>
     <div class="container">
-      <div class="section-head"><h2>Seções</h2></div>
-      <div class="grid">
+      <div class="cat-chips">
         {CATEGORIES.map((c) => (
-          <a class="card" href={`/categoria/${c.slug}/`} style="text-decoration:none">
-            <h3 style="color:var(--text)">{c.name}</h3>
-            <p>{c.desc}</p>
+          <a class="cat-chip" href={`/categoria/${c.slug}/`} style={`--c:${c.color}`}>
+            <span class="ico"><Icon name={c.icon} /></span>
+            <span><strong>{c.short}</strong><small>{noticias.filter((n) => n.data.category === c.slug).length} notícias</small></span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
+  {latest.length > 0 && (
+    <section>
+      <div class="container">
+        <div class="section-head"><h2>Últimas notícias</h2><a href="/noticias/">Ver todas →</a></div>
+        <div class="grid-4">{latest.map((n) => <NewsCard item={n} />)}</div>
+      </div>
+    </section>
+  )}
+
+  {byCat.filter((b) => b.items.length > 0).map(({ c, items }) => (
+    <section>
+      <div class="container">
+        <div class="section-head" style={`--accent:${c.color}`}><h2>{c.name}</h2><a href={`/categoria/${c.slug}/`}>Mais de {c.short} →</a></div>
+        <div class="grid-4">{items.map((n) => <NewsCard item={n} />)}</div>
+      </div>
+    </section>
+  ))}
+
+  {artigos.length > 0 && (
+    <section>
+      <div class="container">
+        <div class="section-head" style="--accent:var(--orange)"><h2>Artigos & análises</h2><a href="/artigos/">Todos os artigos →</a></div>
+        <div class="grid-4">{artigos.map((p) => <ArticleCard post={p} />)}</div>
+      </div>
+    </section>
+  )}
+
   <section>
     <div class="container">
-      <div class="section-head"><h2>Artigos recentes</h2><a href="/artigos/">Ver todos →</a></div>
-      <div class="grid">{artigos.map((post) => <ArticleCard post={post} />)}</div>
+      <div class="radar">
+        <div><strong>{noticias.length}</strong><span>notícias no radar</span></div>
+        <div><strong>{sources}</strong><span>fontes monitoradas</span></div>
+        <div><strong>2x</strong><span>atualizações por dia</span></div>
+        <div><strong>{lastUpdate ? timeAgo(lastUpdate) : '—'}</strong><span>última notícia</span></div>
+      </div>
     </div>
   </section>
 
   <section>
-    <div class="container">
-      <div class="section-head"><h2>Últimas notícias</h2><a href="/noticias/">Ver todas →</a></div>
-      <NewsList items={noticias} />
-    </div>
+    <div class="container"><Creator /></div>
   </section>
 </Base>

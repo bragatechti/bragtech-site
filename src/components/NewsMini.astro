@@ -1,0 +1,15 @@
+---
+import Thumb from './Thumb.astro';
+import Badge from './Badge.astro';
+import { timeAgo } from '../lib';
+const { item } = Astro.props;
+const d = item.data;
+---
+<article class="mini">
+  <a href={d.sourceUrl} target="_blank" rel="noopener nofollow" aria-label={d.title}><Thumb image={d.image} category={d.category} /></a>
+  <div class="mini-body">
+    <div class="meta"><Badge category={d.category} /><span>{timeAgo(d.pubDate)}</span></div>
+    <h3><a href={d.sourceUrl} target="_blank" rel="noopener nofollow">{d.title}</a></h3>
+    <div class="meta"><span>{d.source}</span></div>
+  </div>
+</article>

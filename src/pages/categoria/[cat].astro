@@ -1,23 +1,57 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import NewsList from '../../components/NewsList.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import NewsMini from '../../components/NewsMini.astro';
+import Thumb from '../../components/Thumb.astro';
+import Badge from '../../components/Badge.astro';
+import Icon from '../../components/Icon.astro';
 import { CATEGORIES } from '../../consts';
-import { getArtigos, getNoticias } from '../../lib';
+import { getArtigos, getNoticias, timeAgo } from '../../lib';
 
 export function getStaticPaths() {
   return CATEGORIES.map((c) => ({ params: { cat: c.slug }, props: { c } }));
 }
 const { c } = Astro.props;
 const artigos = (await getArtigos()).filter((p) => p.data.category === c.slug);
-const noticias = (await getNoticias()).filter((n) => n.data.category === c.slug).slice(0, 30);
+const noticias = (await getNoticias()).filter((n) => n.data.category === c.slug);
+const featured = noticias.find((n) => n.data.image) ?? noticias[0];
+const side = noticias.filter((n) => n !== featured).slice(0, 3);
+const rest = noticias.filter((n) => n !== featured && !side.includes(n)).slice(0, 60);
 ---
 <Base title={c.name} description={c.desc}>
-  <section class="container">
-    <h1>{c.name}</h1>
-    <p class="meta">{c.desc}</p>
-    {artigos.length > 0 && (<><h2>Artigos</h2><div class="grid">{artigos.map((post) => <ArticleCard post={post} />)}</div></>)}
-    <h2 style="margin-top:2rem">Notícias</h2>
-    <NewsList items={noticias} />
-  </section>
+  <div class="container">
+    <div class="page-head" style={`--c:${c.color}`}>
+      <div style="display:flex;gap:1rem;align-items:center">
+        <span class="cat-chip" style={`--c:${c.color};padding:0;border:0;background:none`}><span class="ico" style="width:56px;height:56px"><Icon name={c.icon} /></span></span>
+        <div><span class="kicker" style={`color:${c.color}`}>Editoria</span><h1 style="margin:.1rem 0">{c.name}</h1></div>
+      </div>
+      <p style="margin-top:.6rem">{c.desc}</p>
+    </div>
+  </div>
+  {featured && (
+    <section style="padding-top:.5rem">
+      <div class="container hero-grid">
+        <article class="feature">
+          <Thumb image={featured.data.image} category={featured.data.category} eager />
+          <div class="feature-body">
+            <div class="meta"><Badge category={featured.data.category} /><span>{featured.data.source}</span><span class="dot"></span><span>{timeAgo(featured.data.pubDate)}</span></div>
+            <h2><a href={featured.data.sourceUrl} target="_blank" rel="noopener nofollow">{featured.data.title}</a></h2>
+            {featured.data.summary && <p>{featured.data.summary}</p>}
+          </div>
+        </article>
+        <div class="side-list">{side.map((n) => <NewsMini item={n} />)}</div>
+      </div>
+    </section>
+  )}
+  {artigos.length > 0 && (
+    <section><div class="container">
+      <div class="section-head" style="--accent:var(--orange)"><h2>Artigos BragaTech</h2></div>
+      <div class="grid-4">{artigos.map((p) => <ArticleCard post={p} />)}</div>
+    </div></section>
+  )}
+  <section><div class="container">
+    <div class="section-head" style={`--accent:${c.color}`}><h2>Mais notícias</h2><a href={`/noticias/?cat=${c.slug}`}>Buscar em {c.short} →</a></div>
+    {rest.length > 0 ? <div class="grid">{rest.map((n) => <NewsCard item={n} />)}</div> : <p class="meta">Novas notícias desta editoria aparecem aqui após a próxima coleta automática.</p>}
+  </div></section>
 </Base>

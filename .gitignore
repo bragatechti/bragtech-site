@@ -4,3 +4,7 @@ dist/
 .DS_Store
 .env
 __pycache__/
+public/logo-full.webp
+public/logo-emblem.webp
+public/favicon.png
+public/apple-touch-icon.png

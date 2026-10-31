@@ -4,9 +4,13 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import { getArtigos } from '../../lib';
 const posts = await getArtigos();
 ---
-<Base title="Artigos" description="Artigos técnicos, tutoriais e análises da BragaTech.">
-  <section class="container">
-    <h1>Artigos</h1>
-    <div class="grid">{posts.map((post) => <ArticleCard post={post} />)}</div>
-  </section>
+<Base title="Artigos & análises" description="Artigos autorais, tutoriais e análises da BragaTech.">
+  <div class="container">
+    <div class="page-head">
+      <span class="kicker">Conteúdo autoral</span>
+      <h1>Artigos & análises</h1>
+      <p>Experiência prática em infraestrutura, segurança da informação, cloud e governança de IA.</p>
+    </div>
+    <section style="padding-top:.5rem"><div class="grid">{posts.map((post) => <ArticleCard post={post} />)}</div></section>
+  </div>
 </Base>

@@ -2,9 +2,10 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Página não encontrada">
-  <section class="container page">
-    <h1>404 — Página não encontrada</h1>
-    <p>O conteúdo que você procura não existe ou foi movido.</p>
-    <p><a class="btn" href="/">Voltar ao início</a></p>
-  </section>
+  <div class="container narrow" style="text-align:center;padding:4rem 0">
+    <span class="kicker">Erro 404</span>
+    <h1 style="font-size:3rem;margin:.5rem 0">Sinal perdido</h1>
+    <p style="color:var(--muted)">O conteúdo que você procura não existe ou foi movido.</p>
+    <p style="margin-top:1.5rem"><a class="btn" href="/">Voltar ao início</a></p>
+  </div>
 </Base>
