@@ -5,4 +5,5 @@ pubDate: 2026-10-30T16:00:00Z
 category: cloud
 source: "Google Cloud Blog"
 sourceUrl: "https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud/"
+image: "https://storage.googleapis.com/gweb-cloudblog-publish/images/whats_new_2026_CfhxFWX.max-2500x2500.jpg"
 ---

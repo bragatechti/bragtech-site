@@ -5,4 +5,5 @@ pubDate: 2026-10-29T16:00:00Z
 category: cloud
 source: "Google Cloud Blog"
 sourceUrl: "https://cloud.google.com/blog/products/data-analytics/expanded-semantic-model-support-in-knowledge-catalog/"
+image: "https://storage.googleapis.com/gweb-cloudblog-publish/images/Data_Analytics_JooYPJr.max-2500x2500.jpg"
 ---

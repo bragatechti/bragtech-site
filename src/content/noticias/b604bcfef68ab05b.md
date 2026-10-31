@@ -5,4 +5,5 @@ pubDate: 2026-10-30T22:19:00Z
 category: tecnologia
 source: "Canaltech"
 sourceUrl: "https://canaltech.com.br/games/7-melhores-edicoes-limitadas-do-master-system/"
+image: "https://tl.ctcdn.com.br/L6mYGFdpglfu8sC1CNavAWbMSXk=/1200x675/smart/filters:format(webp):quality(85)/840dc8d5-6cdb-478b-a840-b6e838512887.jpg"
 ---
