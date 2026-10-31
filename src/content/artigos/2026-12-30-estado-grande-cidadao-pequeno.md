@@ -1,7 +1,8 @@
 ---
 title: 'Estado grande, cidadão pequeno: o peso da máquina pública'
 description: 'Quanto maior o Estado, menor o espaço para a liberdade e para quem produz. Uma reflexão sobre burocracia, impostos e eficiência.'
-pubDate: 2026-12-30
+pubDate: 2026-10-31
+slug: estado-grande-cidadao-pequeno
 category: politica
 tags: ['política', 'estado', 'impostos', 'burocracia', 'conservadorismo']
 ---

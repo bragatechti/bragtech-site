@@ -1,7 +1,8 @@
 ---
 title: 'Reforma tributária: simplificação ou mais impostos?'
 description: 'Simplificar o sistema tributário é necessário. Mas simplificação sem redução da carga pode significar apenas uma nova forma de cobrar mais.'
-pubDate: 2027-02-28
+pubDate: 2026-11-10
+slug: reforma-tributaria-simplificacao-ou-mais-impostos
 category: politica
 tags: ['reforma tributária', 'impostos', 'economia', 'política']
 ---

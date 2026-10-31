@@ -1,7 +1,8 @@
 ---
 title: 'Ransomware: como se preparar antes do ataque'
 description: 'O ransomware continua sendo a ameaça mais cara para as empresas. Veja o que realmente faz diferença na prevenção e na recuperação.'
-pubDate: 2026-11-20
+pubDate: 2026-10-31
+slug: ransomware-como-se-preparar
 category: ciberseguranca
 tags: ['ransomware', 'backup', 'resposta a incidentes', 'segurança']
 ---

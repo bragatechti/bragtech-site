@@ -1,7 +1,8 @@
 ---
 title: 'Família, educação e valores: a base de uma sociedade forte'
 description: 'Antes de qualquer política pública, é na família e na educação que se formam cidadãos responsáveis. Uma reflexão conservadora.'
-pubDate: 2027-03-30
+pubDate: 2026-11-20
+slug: familia-educacao-e-valores
 category: politica
 tags: ['família', 'educação', 'valores', 'conservadorismo']
 ---

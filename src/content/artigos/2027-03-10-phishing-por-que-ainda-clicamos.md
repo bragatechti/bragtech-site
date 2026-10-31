@@ -1,7 +1,8 @@
 ---
 title: 'Phishing: por que as pessoas ainda clicam'
 description: 'Mesmo com treinamentos, o phishing continua funcionando. Entender a psicologia do golpe é o primeiro passo para reduzir o risco.'
-pubDate: 2027-03-10
+pubDate: 2026-11-20
+slug: phishing-por-que-ainda-clicamos
 category: ciberseguranca
 tags: ['phishing', 'conscientização', 'engenharia social', 'segurança']
 ---

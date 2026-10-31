@@ -1,7 +1,8 @@
 ---
 title: 'Virtualização com Proxmox: vale a pena para empresas?'
 description: 'Com as mudanças de licenciamento no mercado, o Proxmox VE ganhou espaço. Veja vantagens, cuidados e quando faz sentido adotar.'
-pubDate: 2027-02-18
+pubDate: 2026-11-10
+slug: virtualizacao-com-proxmox
 category: infraestrutura
 tags: ['proxmox', 'virtualização', 'infraestrutura', 'datacenter']
 ---

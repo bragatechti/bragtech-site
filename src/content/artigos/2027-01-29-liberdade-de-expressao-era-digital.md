@@ -1,7 +1,8 @@
 ---
 title: 'Liberdade de expressão na era digital'
 description: 'A internet ampliou a voz de cada cidadão. Defender a liberdade de expressão é defender o direito de discordar.'
-pubDate: 2027-01-29
+pubDate: 2026-11-10
+slug: liberdade-de-expressao-era-digital
 category: politica
 tags: ['liberdade de expressão', 'internet', 'política', 'conservadorismo']
 ---

@@ -1,7 +1,8 @@
 ---
 title: 'Selic, inflação e seu bolso: o que todo profissional deveria entender'
 description: 'Taxa de juros e inflação parecem assunto de economista, mas afetam salário, financiamentos e investimentos de todo mundo.'
-pubDate: 2027-04-09
+pubDate: 2026-10-31
+slug: selic-inflacao-e-seu-bolso
 category: mercado
 tags: ['selic', 'inflação', 'juros', 'educação financeira']
 ---

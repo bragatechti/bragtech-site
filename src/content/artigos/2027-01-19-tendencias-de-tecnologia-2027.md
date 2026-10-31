@@ -1,7 +1,8 @@
 ---
 title: 'Tecnologia em 2027: tendências que vão impactar as empresas'
 description: 'IA agêntica, segurança de identidade, eficiência em nuvem e regulação. O que acompanhar de perto neste ano.'
-pubDate: 2027-01-19
+pubDate: 2026-10-31
+slug: tendencias-de-tecnologia-2027
 category: tecnologia
 tags: ['tendências', 'ia', 'cloud', 'segurança', '2027']
 ---

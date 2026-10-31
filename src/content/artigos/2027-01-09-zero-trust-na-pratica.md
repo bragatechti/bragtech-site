@@ -1,7 +1,8 @@
 ---
 title: 'Zero Trust na prática: identidade é o novo perímetro'
 description: 'Com usuários em qualquer lugar e sistemas na nuvem, o firewall da empresa não basta. Entenda como aplicar Zero Trust sem complicar.'
-pubDate: 2027-01-09
+pubDate: 2026-11-10
+slug: zero-trust-na-pratica
 category: ciberseguranca
 tags: ['zero trust', 'identidade', 'mfa', 'entra id']
 ---

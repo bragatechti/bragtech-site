@@ -1,7 +1,8 @@
 ---
 title: 'Segurança pública e Estado de Direito'
 description: 'Sem segurança não há liberdade, investimento nem futuro. A lei precisa valer para todos, e o cidadão de bem precisa ser protegido.'
-pubDate: 2027-04-29
+pubDate: 2026-11-20
+slug: seguranca-publica-e-estado-de-direito
 category: politica
 tags: ['segurança pública', 'estado de direito', 'justiça', 'política']
 ---

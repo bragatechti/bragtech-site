@@ -1,7 +1,8 @@
 ---
 title: 'Observabilidade: enxergar o problema antes do usuário'
 description: 'Monitorar não é só saber se o servidor está ligado. Observabilidade é ter dados para agir antes que o chamado seja aberto.'
-pubDate: 2026-12-20
+pubDate: 2026-10-31
+slug: observabilidade-enxergar-antes
 category: infraestrutura
 tags: ['observabilidade', 'zabbix', 'grafana', 'monitoramento']
 ---

@@ -1,7 +1,8 @@
 ---
 title: 'Agentes de IA nas empresas: do protótipo à operação'
 description: 'Criar um agente de IA em poucos dias é fácil. Operá-lo com segurança, governança e custo controlado é outra história.'
-pubDate: 2026-11-10
+pubDate: 2026-10-31
+slug: agentes-de-ia-do-prototipo-a-operacao
 category: ia
 tags: ['ia', 'agentes', 'governança', 'llm']
 ---

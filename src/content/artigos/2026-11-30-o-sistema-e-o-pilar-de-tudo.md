@@ -1,7 +1,8 @@
 ---
 title: 'O sistema é o pilar de tudo: por que a política importa mais do que parece'
 description: 'Impostos, juros, educação, segurança e até a tecnologia que usamos dependem de decisões políticas. Ignorar a política é deixar que outros decidam por nós.'
-pubDate: 2026-11-30
+pubDate: 2026-10-31
+slug: o-sistema-e-o-pilar-de-tudo
 category: politica
 tags: ['política', 'conservadorismo', 'estado', 'liberdade']
 ---

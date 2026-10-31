@@ -1,7 +1,8 @@
 ---
 title: 'FinOps: como parar de desperdiçar dinheiro na nuvem'
 description: 'A nuvem prometeu economia, mas a fatura mensal muitas vezes assusta. FinOps é a disciplina que traz controle e previsibilidade aos custos.'
-pubDate: 2026-12-10
+pubDate: 2026-10-31
+slug: finops-desperdicio-na-nuvem
 category: cloud
 tags: ['cloud', 'finops', 'azure', 'aws', 'custos']
 ---

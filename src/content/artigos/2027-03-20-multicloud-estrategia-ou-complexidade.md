@@ -1,7 +1,8 @@
 ---
 title: 'Multicloud: estratégia ou complexidade?'
 description: 'Usar Azure, AWS e Google Cloud ao mesmo tempo pode trazer flexibilidade, mas também custos e riscos. Quando vale a pena?'
-pubDate: 2027-03-20
+pubDate: 2026-11-10
+slug: multicloud-estrategia-ou-complexidade
 category: cloud
 tags: ['multicloud', 'azure', 'aws', 'google cloud', 'arquitetura']
 ---

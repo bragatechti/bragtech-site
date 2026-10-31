@@ -1,7 +1,8 @@
 ---
 title: 'IA generativa e LGPD: o que pode e o que não pode'
 description: 'Usar IA no trabalho é inevitável. Fazer isso sem expor dados pessoais e informações sigilosas exige regras claras.'
-pubDate: 2027-02-08
+pubDate: 2026-11-10
+slug: ia-generativa-e-lgpd
 category: ia
 tags: ['ia', 'lgpd', 'privacidade', 'governança']
 ---
