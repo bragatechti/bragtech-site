@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import { CREATOR } from '../consts';
+import ContactForm from '../components/ContactForm.astro';
 ---
 <Base title="Contato" description="Fale com a BragaTech.">
   <div class="container narrow">
@@ -15,5 +16,6 @@ import { CREATOR } from '../consts';
       <a class="card" href="mailto:contato@bragagnolo.tec.br" style="text-decoration:none"><div class="card-body"><span style="color:var(--orange);width:32px;display:block"><Icon name="mail" /></span><h3>E-mail</h3><p>contato@bragagnolo.tec.br</p></div></a>
       <a class="card" href="/rss.xml" style="text-decoration:none"><div class="card-body"><span style="color:var(--cyan);width:32px;display:block"><Icon name="rss" /></span><h3>Feed RSS</h3><p>Receba os artigos no seu leitor de RSS.</p></div></a>
     </div>
+    <ContactForm />
   </div>
 </Base>

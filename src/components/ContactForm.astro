@@ -1,0 +1,133 @@
+---
+import { CONTACT_FORM_KEY } from '../consts';
+---
+<div class="contact-box" id="contato-form">
+  <span class="kicker">Fale comigo</span>
+  <h2>Entre em contato</h2>
+  <p class="contact-sub">Preencha os campos abaixo e eu retorno o quanto antes.</p>
+
+  <form id="contactForm" novalidate>
+    <input type="hidden" name="access_key" value={CONTACT_FORM_KEY} />
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+    <div class="cf-grid">
+      <label>Nome<input type="text" name="nome" required maxlength="100" autocomplete="name" placeholder="Seu nome completo" /></label>
+      <label>E-mail<input type="email" name="email" required maxlength="120" autocomplete="email" placeholder="voce@exemplo.com" /></label>
+      <label>Celular<input type="tel" name="celular" required maxlength="20" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" data-phone /></label>
+      <label>WhatsApp<input type="tel" name="whatsapp" maxlength="20" inputmode="tel" placeholder="(11) 99999-9999" data-phone /></label>
+    </div>
+    <label class="cf-check"><input type="checkbox" id="sameWpp" /> O WhatsApp é o mesmo número do celular</label>
+    <label>Assunto<textarea name="assunto" required maxlength="3000" rows="5" placeholder="Conte o motivo do seu contato"></textarea></label>
+    <label class="cf-check"><input type="checkbox" name="consentimento" value="sim" required /> Concordo com o uso dos meus dados apenas para responder a este contato, conforme a <a href="/privacidade/">Política de Privacidade</a>.</label>
+
+    <button type="submit" class="btn">Enviar mensagem</button>
+    <p class="cf-status" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  if (form) {
+    const status = form.querySelector('.cf-status') as HTMLElement;
+    const btn = form.querySelector('button[type=submit]') as HTMLButtonElement;
+    const cel = form.querySelector('[name=celular]') as HTMLInputElement;
+    const wpp = form.querySelector('[name=whatsapp]') as HTMLInputElement;
+    const same = form.querySelector('#sameWpp') as HTMLInputElement;
+
+    const mask = (v: string) => {
+      const d = v.replace(/\D/g, '').slice(0, 11);
+      if (d.length <= 2) return d.length ? `(${d}` : '';
+      if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+      if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+      return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+    };
+    form.querySelectorAll<HTMLInputElement>('[data-phone]').forEach((el) =>
+      el.addEventListener('input', () => {
+        el.value = mask(el.value);
+        if (same.checked && el === cel) wpp.value = cel.value;
+      })
+    );
+    same.addEventListener('change', () => {
+      wpp.readOnly = same.checked;
+      if (same.checked) wpp.value = cel.value;
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'cf-status';
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      if (cel.value.replace(/\D/g, '').length < 10) {
+        status.textContent = 'Informe um celular válido com DDD.';
+        status.classList.add('err');
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+      if (data.botcheck) return;
+      const payload = {
+        access_key: data.access_key,
+        subject: `Contato pelo site BragaTech: ${data.nome}`,
+        from_name: 'BragaTech | Formulário do site',
+        replyto: data.email,
+        Nome: data.nome,
+        'E-mail': data.email,
+        Celular: data.celular,
+        WhatsApp: data.whatsapp || '(não informado)',
+        Assunto: data.assunto,
+        'Consentimento LGPD': 'Sim',
+        botcheck: '',
+      };
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const json = await res.json();
+        if (json.success) {
+          form.reset();
+          wpp.readOnly = false;
+          status.textContent = 'Mensagem enviada com sucesso! Em breve retorno o seu contato.';
+          status.classList.add('ok');
+        } else {
+          throw new Error(json.message || 'Falha no envio');
+        }
+      } catch {
+        status.innerHTML = 'Não foi possível enviar agora. Tente novamente ou escreva para <a href="mailto:contato@bragagnolo.tec.br">contato@bragagnolo.tec.br</a>.';
+        status.classList.add('err');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Enviar mensagem';
+      }
+    });
+  }
+</script>
+
+<style>
+  .contact-box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; margin: 2rem 0; box-shadow: var(--glow); }
+  .contact-box h2 { margin: .2rem 0 .3rem; font-size: 1.6rem; }
+  .contact-sub { color: var(--muted); margin: 0 0 1.2rem; }
+  form { display: flex; flex-direction: column; gap: .9rem; }
+  .cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  @media (max-width: 640px) { .cf-grid { grid-template-columns: 1fr; } }
+  label { display: flex; flex-direction: column; gap: .35rem; font-size: .88rem; font-weight: 600; color: #c5d0e8; }
+  input[type=text], input[type=email], input[type=tel], textarea {
+    background: rgba(4, 7, 13, .6); border: 1px solid var(--border-strong); border-radius: 10px; color: var(--text);
+    padding: .7rem .85rem; font: inherit; font-weight: 400; font-size: .95rem; outline: none; transition: border-color .2s, box-shadow .2s;
+  }
+  input:focus, textarea:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(56, 214, 255, .18); }
+  input[readonly] { opacity: .7; }
+  textarea { resize: vertical; min-height: 120px; }
+  .cf-check { flex-direction: row; align-items: flex-start; gap: .55rem; font-weight: 400; color: var(--muted); }
+  .cf-check input { margin-top: .2rem; accent-color: var(--blue); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .btn { align-self: flex-start; }
+  .btn[disabled] { opacity: .6; cursor: wait; }
+  .cf-status { margin: 0; font-size: .92rem; min-height: 1.2em; }
+  .cf-status.ok { color: #4ade80; }
+  .cf-status.err { color: #f87171; }
+</style>

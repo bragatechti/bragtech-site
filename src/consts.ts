@@ -24,3 +24,6 @@ export const CREATOR = {
   linkedin: 'https://www.linkedin.com/in/joseraulbragagnolofilho/',
   location: 'São Paulo, Brasil',
 };
+
+// Chave pública do Web3Forms (envia o formulário de contato para raul@bragagnolo.tec.br)
+export const CONTACT_FORM_KEY = '4473685e-8997-41a7-9cff-8758beef894d';
