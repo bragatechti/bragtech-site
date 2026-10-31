@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getArtigos } from '../../lib';
+const posts = await getArtigos();
+---
+<Base title="Artigos" description="Artigos técnicos, tutoriais e análises da BragaTech.">
+  <section class="container">
+    <h1>Artigos</h1>
+    <div class="grid">{posts.map((post) => <ArticleCard post={post} />)}</div>
+  </section>
+</Base>

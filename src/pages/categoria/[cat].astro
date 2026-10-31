@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import NewsList from '../../components/NewsList.astro';
+import { CATEGORIES } from '../../consts';
+import { getArtigos, getNoticias } from '../../lib';
+
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { cat: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const artigos = (await getArtigos()).filter((p) => p.data.category === c.slug);
+const noticias = (await getNoticias()).filter((n) => n.data.category === c.slug).slice(0, 30);
+---
+<Base title={c.name} description={c.desc}>
+  <section class="container">
+    <h1>{c.name}</h1>
+    <p class="meta">{c.desc}</p>
+    {artigos.length > 0 && (<><h2>Artigos</h2><div class="grid">{artigos.map((post) => <ArticleCard post={post} />)}</div></>)}
+    <h2 style="margin-top:2rem">Notícias</h2>
+    <NewsList items={noticias} />
+  </section>
+</Base>

@@ -1,0 +1,13 @@
+---
+import FormattedDate from './FormattedDate.astro';
+import { categoryName } from '../consts';
+const { post } = Astro.props;
+---
+<article class="card">
+  <div class="meta">
+    <a class="badge" href={`/categoria/${post.data.category}/`}>{categoryName(post.data.category)}</a>
+    <FormattedDate date={post.data.pubDate} />
+  </div>
+  <h3><a href={`/artigos/${post.id}/`}>{post.data.title}</a></h3>
+  <p>{post.data.description}</p>
+</article>

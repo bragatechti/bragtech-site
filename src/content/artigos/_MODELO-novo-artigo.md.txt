@@ -1,0 +1,14 @@
+---
+title: 'Título do artigo'
+description: 'Resumo de 1-2 frases (aparece no Google e nos cards).'
+pubDate: 2026-11-01
+category: ciberseguranca   # ciberseguranca | cloud | infraestrutura | tecnologia
+tags: ['tag1', 'tag2']
+draft: false               # true = não publica
+---
+
+Escreva aqui em Markdown.
+
+## Subtítulo
+
+Texto, **negrito**, [links](https://exemplo.com), listas, tabelas e blocos de código.

@@ -1,0 +1,21 @@
+---
+import FormattedDate from './FormattedDate.astro';
+import { categoryName } from '../consts';
+const { items, showSummary = true } = Astro.props;
+---
+{items.length === 0 ? (
+  <p class="meta">Nenhuma notícia coletada ainda. A automação diária adicionará as primeiras em breve.</p>
+) : (
+  <ul class="news-list">
+    {items.map((n: any) => (
+      <li>
+        <a class="title" href={n.data.sourceUrl} target="_blank" rel="noopener nofollow">{n.data.title}</a>
+        <div class="meta">
+          <span>{n.data.source}</span> · <FormattedDate date={n.data.pubDate} /> ·
+          <a class="badge" href={`/categoria/${n.data.category}/`}>{categoryName(n.data.category)}</a>
+        </div>
+        {showSummary && n.data.summary && <p>{n.data.summary}</p>}
+      </li>
+    ))}
+  </ul>
+)}

@@ -1,0 +1,22 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Início' },
+  { href: '/artigos/', label: 'Artigos' },
+  { href: '/noticias/', label: 'Notícias' },
+  { href: '/categoria/ciberseguranca/', label: 'Cibersegurança' },
+  { href: '/categoria/cloud/', label: 'Cloud' },
+  { href: '/categoria/infraestrutura/', label: 'Infraestrutura' },
+  { href: '/sobre/', label: 'Sobre' },
+  { href: '/contato/', label: 'Contato' },
+];
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">Braga<span>Tech</span></a>
+    <nav class="nav" aria-label="Principal">
+      {links.map((l) => <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>)}
+    </nav>
+  </div>
+</header>

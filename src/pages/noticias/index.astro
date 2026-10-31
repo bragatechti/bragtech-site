@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import NewsList from '../../components/NewsList.astro';
+import { getNoticias } from '../../lib';
+const items = await getNoticias();
+---
+<Base title="Notícias" description="Notícias de tecnologia, cloud e cibersegurança selecionadas automaticamente de fontes confiáveis.">
+  <section class="container">
+    <h1>Notícias</h1>
+    <p class="meta">Curadoria automática diária. Os links levam às fontes originais.</p>
+    <NewsList items={items} />
+  </section>
+</Base>

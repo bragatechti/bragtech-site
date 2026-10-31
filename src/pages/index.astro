@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import NewsList from '../components/NewsList.astro';
+import { CATEGORIES, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
+import { getArtigos, getNoticias } from '../lib';
+
+const artigos = (await getArtigos()).slice(0, 6);
+const noticias = (await getNoticias()).slice(0, 10);
+---
+<Base>
+  <section class="hero">
+    <div class="container">
+      <div class="kicker">Tecnologia • Infraestrutura • Cibersegurança</div>
+      <h1>{SITE_TAGLINE}</h1>
+      <p>{SITE_DESCRIPTION}</p>
+      <p style="margin-top:1.5rem"><a class="btn" href="/artigos/">Ler os artigos</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>Seções</h2></div>
+      <div class="grid">
+        {CATEGORIES.map((c) => (
+          <a class="card" href={`/categoria/${c.slug}/`} style="text-decoration:none">
+            <h3 style="color:var(--text)">{c.name}</h3>
+            <p>{c.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>Artigos recentes</h2><a href="/artigos/">Ver todos →</a></div>
+      <div class="grid">{artigos.map((post) => <ArticleCard post={post} />)}</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>Últimas notícias</h2><a href="/noticias/">Ver todas →</a></div>
+      <NewsList items={noticias} />
+    </div>
+  </section>
+</Base>
