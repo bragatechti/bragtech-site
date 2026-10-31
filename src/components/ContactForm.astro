@@ -81,21 +81,37 @@ import { CONTACT_FORM_KEY } from '../consts';
       };
       btn.disabled = true;
       btn.textContent = 'Enviando...';
+      const ok = () => {
+        form.reset();
+        wpp.readOnly = false;
+        status.textContent = 'Mensagem enviada com sucesso! Em breve retorno o seu contato.';
+        status.classList.add('ok');
+      };
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        const json = await res.json();
-        if (json.success) {
-          form.reset();
-          wpp.readOnly = false;
-          status.textContent = 'Mensagem enviada com sucesso! Em breve retorno o seu contato.';
-          status.classList.add('ok');
-        } else {
-          throw new Error(json.message || 'Falha no envio');
+        // 1) Envio principal: Brevo, com remetente contato@bragagnolo.tec.br
+        let sent = false;
+        try {
+          const r = await fetch('/api/contato', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ nome: data.nome, email: data.email, celular: data.celular, whatsapp: data.whatsapp, assunto: data.assunto, consentimento: data.consentimento, botcheck: '' }),
+          });
+          const j = await r.json();
+          sent = !!j.success;
+        } catch {
+          sent = false;
         }
+        // 2) Reserva: Web3Forms, caso o envio principal falhe
+        if (!sent) {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const json = await res.json();
+          if (!json.success) throw new Error(json.message || 'Falha no envio');
+        }
+        ok();
       } catch {
         status.innerHTML = 'Não foi possível enviar agora. Tente novamente ou escreva para <a href="mailto:contato@bragagnolo.tec.br">contato@bragagnolo.tec.br</a>.';
         status.classList.add('err');
