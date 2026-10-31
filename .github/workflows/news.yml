@@ -1,0 +1,38 @@
+# Coleta automática de notícias (2x por dia). Cada commit dispara a publicação no Cloudflare Pages.
+name: Atualizar noticias
+
+on:
+  schedule:
+    - cron: '17 9,21 * * *'   # 06:17 e 18:17 (horario de Brasilia)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Coletar noticias
+        run: python scripts/fetch_news.py
+      - name: Publicar alteracoes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/noticias
+          if git diff --cached --quiet; then
+            echo "Nenhuma noticia nova."
+          else
+            git commit -m "Noticias: atualizacao automatica $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          fi
