@@ -1,7 +1,9 @@
 import { getCollection } from 'astro:content';
 
 export async function getArtigos() {
-  const posts = await getCollection('artigos', ({ data }) => import.meta.env.DEV || !data.draft);
+  // Artigos com data futura ficam agendados: aparecem sozinhos quando a data chegar
+  const now = Date.now();
+  const posts = await getCollection('artigos', ({ data }) => !data.draft && data.pubDate.valueOf() <= now);
   return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 

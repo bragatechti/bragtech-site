@@ -1,8 +1,8 @@
 ---
 title: 'Título do artigo'
 description: 'Resumo de 1-2 frases (aparece no Google e nos cards).'
-pubDate: 2026-11-01
-category: ciberseguranca   # ia | ciberseguranca | cloud | infraestrutura | tecnologia
+pubDate: 2026-11-01        # data futura = artigo agendado (publica sozinho na data)
+category: ciberseguranca   # ia | ciberseguranca | cloud | infraestrutura | tecnologia | mercado | politica
 tags: ['tag1', 'tag2']
 cover: ""                 # opcional: URL https de uma imagem de capa
 draft: false               # true = não publica

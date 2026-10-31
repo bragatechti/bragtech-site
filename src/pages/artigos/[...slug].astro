@@ -18,7 +18,7 @@ const minutes = readingTime(post.body ?? '');
 <Base title={post.data.title} description={post.data.description} type="article" image={post.data.cover}>
   <article class="article">
     <div class="page-head" style="padding-bottom:0">
-      <div class="meta"><Badge category={post.data.category} /><FormattedDate date={post.data.pubDate} /><span class="dot"></span><span>{minutes} min de leitura</span></div>
+      <div class="meta"><Badge category={post.data.category} />{post.data.category === 'politica' && <span class="badge" style="--c:#ef4444">Opinião</span>}<span>Por <strong>Raul Bragagnolo</strong></span><span class="dot"></span><FormattedDate date={post.data.pubDate} /><span class="dot"></span><span>{minutes} min de leitura</span></div>
       <h1>{post.data.title}</h1>
       <p>{post.data.description}</p>
     </div>

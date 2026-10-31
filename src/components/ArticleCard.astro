@@ -7,7 +7,7 @@ const { post } = Astro.props;
 <article class="card">
   <a href={`/artigos/${post.id}/`} aria-label={post.data.title}><Thumb image={post.data.cover} category={post.data.category} /></a>
   <div class="card-body">
-    <div class="meta"><Badge category={post.data.category} /><span class="kicker" style="font-size:.65rem">Artigo BragaTech</span></div>
+    <div class="meta"><Badge category={post.data.category} /><span class="kicker" style="font-size:.65rem">{post.data.category === 'politica' ? 'Opinião' : 'Por Raul Bragagnolo'}</span></div>
     <h3><a href={`/artigos/${post.id}/`}>{post.data.title}</a></h3>
     <p>{post.data.description}</p>
     <div class="meta"><FormattedDate date={post.data.pubDate} /></div>

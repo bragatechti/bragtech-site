@@ -10,6 +10,7 @@ export const CATEGORIES = [
   { slug: 'infraestrutura', name: 'Infraestrutura de TI', short: 'Infra', desc: 'Redes, servidores, virtualização, observabilidade e backup.', color: '#22c55e', icon: 'server' },
   { slug: 'tecnologia', name: 'Tecnologia', short: 'Tecnologia', desc: 'Big techs, gadgets, software, negócios e inovação.', color: '#1e9bff', icon: 'chip' },
   { slug: 'mercado', name: 'Mercado & Economia', short: 'Mercado', desc: 'Dólar, euro, bolsas no Brasil e no mundo, juros, Selic, inflação e reforma tributária.', color: '#eab308', icon: 'chart' },
+  { slug: 'politica', name: 'Política & Opinião', short: 'Política', desc: 'Artigos de opinião sobre política, Estado, liberdade e economia, com visão conservadora e de direita.', color: '#ef4444', icon: 'flag' },
 ] as const;
 
 export type CategorySlug = (typeof CATEGORIES)[number]['slug'];

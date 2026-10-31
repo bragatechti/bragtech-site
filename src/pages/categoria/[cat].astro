@@ -57,8 +57,13 @@ const rest = noticias.filter((n) => n !== featured && !side.includes(n)).slice(0
       <div class="grid-4">{artigos.map((p) => <ArticleCard post={p} />)}</div>
     </div></section>
   )}
+  {c.slug === 'politica' && artigos.length === 0 && (
+    <section style="padding-top:.5rem"><div class="container"><p class="meta">Os primeiros artigos de opinião serão publicados em breve.</p></div></section>
+  )}
+  {c.slug !== 'politica' && (
   <section><div class="container">
     <div class="section-head" style={`--accent:${c.color}`}><h2>Mais notícias</h2><a href={`/noticias/?cat=${c.slug}`}>Buscar em {c.short} →</a></div>
     {rest.length > 0 ? <div class="grid">{rest.map((n) => <NewsCard item={n} />)}</div> : <p class="meta">Novas notícias desta editoria aparecem aqui após a próxima coleta automática.</p>}
   </div></section>
+  )}
 </Base>

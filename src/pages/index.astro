@@ -63,7 +63,7 @@ const lastUpdate = noticias[0]?.data.pubDate;
   <section>
     <div class="container">
       <div class="cat-chips">
-        {CATEGORIES.map((c) => (
+        {CATEGORIES.filter((c) => c.slug !== 'politica').map((c) => (
           <a class="cat-chip" href={`/categoria/${c.slug}/`} style={`--c:${c.color}`}>
             <span class="ico"><Icon name={c.icon} /></span>
             <span><strong>{c.short}</strong><small>{noticias.filter((n) => n.data.category === c.slug).length} notícias</small></span>
