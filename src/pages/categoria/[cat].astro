@@ -6,6 +6,7 @@ import NewsMini from '../../components/NewsMini.astro';
 import Thumb from '../../components/Thumb.astro';
 import Badge from '../../components/Badge.astro';
 import Icon from '../../components/Icon.astro';
+import MarketPanel from '../../components/MarketPanel.astro';
 import { CATEGORIES } from '../../consts';
 import { getArtigos, getNoticias, timeAgo } from '../../lib';
 
@@ -29,6 +30,12 @@ const rest = noticias.filter((n) => n !== featured && !side.includes(n)).slice(0
       <p style="margin-top:.6rem">{c.desc}</p>
     </div>
   </div>
+  {c.slug === 'mercado' && (
+    <section style="padding-top:.5rem"><div class="container">
+      <div class="section-head" style="--accent:#eab308"><h2>Cotações e indicadores</h2></div>
+      <MarketPanel />
+    </div></section>
+  )}
   {featured && (
     <section style="padding-top:.5rem">
       <div class="container hero-grid">

@@ -8,7 +8,8 @@ export const CATEGORIES = [
   { slug: 'ciberseguranca', name: 'Cibersegurança', short: 'Segurança', desc: 'Ameaças, ransomware, vulnerabilidades, SOC, Zero Trust e LGPD.', color: '#ff7a1a', icon: 'shield' },
   { slug: 'cloud', name: 'Cloud Computing', short: 'Cloud', desc: 'Azure, AWS, Google Cloud, multicloud e FinOps.', color: '#38bdf8', icon: 'cloud' },
   { slug: 'infraestrutura', name: 'Infraestrutura de TI', short: 'Infra', desc: 'Redes, servidores, virtualização, observabilidade e backup.', color: '#22c55e', icon: 'server' },
-  { slug: 'tecnologia', name: 'Tecnologia & Mercado', short: 'Tecnologia', desc: 'Big techs, gadgets, software, negócios e inovação.', color: '#1e9bff', icon: 'chip' },
+  { slug: 'tecnologia', name: 'Tecnologia', short: 'Tecnologia', desc: 'Big techs, gadgets, software, negócios e inovação.', color: '#1e9bff', icon: 'chip' },
+  { slug: 'mercado', name: 'Mercado & Economia', short: 'Mercado', desc: 'Dólar, euro, bolsas no Brasil e no mundo, juros, Selic, inflação e reforma tributária.', color: '#eab308', icon: 'chart' },
 ] as const;
 
 export type CategorySlug = (typeof CATEGORIES)[number]['slug'];

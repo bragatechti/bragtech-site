@@ -157,7 +157,8 @@ a:hover .thumb img, .card:hover .thumb img { transform: scale(1.05); }
 @media (max-width: 760px) { .brand-hero .wrap { grid-template-columns: 1fr; } .brand-hero .logo-big { width: 160px; } }
 
 /* ---------- Chips de categoria ---------- */
-.cat-chips { display: grid; grid-template-columns: repeat(5, 1fr); gap: .8rem; }
+.cat-chips { display: grid; grid-template-columns: repeat(6, 1fr); gap: .8rem; }
+@media (max-width: 1100px) { .cat-chips { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 900px) { .cat-chips { grid-template-columns: repeat(2, 1fr); } }
 .cat-chip { display: flex; gap: .75rem; align-items: center; padding: .9rem 1rem; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); color: var(--text); transition: all .2s; }
 .cat-chip:hover { text-decoration: none; border-color: var(--c); box-shadow: 0 0 22px color-mix(in srgb, var(--c) 35%, transparent); transform: translateY(-2px); }

@@ -1,0 +1,82 @@
+---
+import data from '../content/noticias/_data/mercado.json';
+const { compact = false } = Astro.props;
+const fmt = (v: number, d = 2) => v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d });
+const brl = (id: string, v: number) => (id.startsWith('BTC') ? 'R$ ' + fmt(v, 0) : 'R$ ' + fmt(v, 4));
+const upd = data.updated ? new Date(data.updated).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', dateStyle: 'short', timeStyle: 'short' }) : null;
+const bolsas = compact ? data.bolsas.slice(0, 3) : data.bolsas;
+const juros = compact ? data.juros.slice(0, 2) : data.juros;
+const empty = !data.moedas.length && !data.bolsas.length && !data.juros.length;
+---
+<div class="market" id="market">
+  {empty ? (
+    <p class="meta">As cotações aparecem aqui após a próxima atualização automática.</p>
+  ) : (
+    <>
+      <div class="mk-grid">
+        {data.moedas.map((m: any) => (
+          <div class="mk" data-pair={m.id}>
+            <span class="mk-name">{m.nome}</span>
+            <strong class="mk-val">{brl(m.id, m.valor)}</strong>
+            <span class={`mk-var ${m.var >= 0 ? 'up' : 'down'}`}>{m.var >= 0 ? '▲' : '▼'} {fmt(Math.abs(m.var))}%</span>
+          </div>
+        ))}
+        {bolsas.map((b: any) => (
+          <div class="mk">
+            <span class="mk-name">{b.nome} <small>{b.regiao}</small></span>
+            <strong class="mk-val">{fmt(b.valor, 0)} <small>pts</small></strong>
+            <span class={`mk-var ${b.var >= 0 ? 'up' : 'down'}`}>{b.var >= 0 ? '▲' : '▼'} {fmt(Math.abs(b.var))}%</span>
+          </div>
+        ))}
+        {juros.map((j: any) => (
+          <div class="mk mk-rate">
+            <span class="mk-name">{j.nome}</span>
+            <strong class="mk-val">{fmt(j.valor)}<small> {j.unidade}</small></strong>
+            <span class="mk-var neutral">ref. {j.ref}</span>
+          </div>
+        ))}
+      </div>
+      <p class="meta mk-note">
+        <span id="mk-live">{upd ? `Atualizado em ${upd}` : ''}</span>
+        <span class="dot"></span><span>Fontes: AwesomeAPI, Yahoo Finance e Banco Central do Brasil. Cotações com atraso, apenas informativas — não constituem recomendação de investimento.</span>
+      </p>
+    </>
+  )}
+</div>
+<style>
+  .mk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: .8rem; }
+  .mk { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .8rem .95rem; display: flex; flex-direction: column; gap: .15rem; transition: border-color .2s, box-shadow .2s; }
+  .mk:hover { border-color: rgba(234,179,8,.55); box-shadow: 0 0 18px rgba(234,179,8,.18); }
+  .mk-name { font-size: .78rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+  .mk-name small { text-transform: none; font-weight: 400; opacity: .8; }
+  .mk-val { font-size: 1.2rem; color: #fff; font-variant-numeric: tabular-nums; }
+  .mk-val small { font-size: .72rem; color: var(--muted); font-weight: 500; }
+  .mk-var { font-size: .8rem; font-weight: 700; }
+  .mk-var.up { color: #22c55e; } .mk-var.down { color: #ef4444; } .mk-var.neutral { color: var(--muted); font-weight: 500; }
+  .mk-rate { border-color: rgba(234,179,8,.3); }
+  .mk-note { margin-top: .8rem; font-size: .74rem; }
+</style>
+<script>
+  // Atualiza moedas ao vivo no navegador do visitante (AwesomeAPI, gratuita)
+  const tiles = document.querySelectorAll<HTMLElement>('#market [data-pair]');
+  if (tiles.length) {
+    const pairs = [...tiles].map((t) => t.dataset.pair).join(',');
+    fetch(`https://economia.awesomeapi.com.br/json/last/${pairs}`)
+      .then((r) => r.json())
+      .then((data) => {
+        const f = (v: number, d: number) => v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d });
+        tiles.forEach((t) => {
+          const d = data[(t.dataset.pair || '').replace('-', '')];
+          if (!d) return;
+          const v = parseFloat(d.bid), p = parseFloat(d.pctChange);
+          t.querySelector('.mk-val')!.textContent = 'R$ ' + f(v, t.dataset.pair!.startsWith('BTC') ? 0 : 4);
+          const el = t.querySelector('.mk-var')!;
+          el.textContent = `${p >= 0 ? '▲' : '▼'} ${f(Math.abs(p), 2)}%`;
+          el.className = `mk-var ${p >= 0 ? 'up' : 'down'}`;
+        });
+        const live = document.getElementById('mk-live');
+        if (live) live.textContent = 'Moedas ao vivo • ' + new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      })
+      .catch(() => {});
+  }
+</script>

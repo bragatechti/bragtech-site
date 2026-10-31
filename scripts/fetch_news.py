@@ -115,7 +115,7 @@ def og_image(url: str) -> str | None:
 
 
 def classify(title: str, base: str) -> str:
-    if base == "ciberseguranca":
+    if base in ("ciberseguranca", "mercado"):
         return base
     if AI_RE_CS.search(title) or AI_RE_CI.search(title):
         return "ia"
@@ -233,6 +233,13 @@ def main() -> int:
             fixed += 1
 
     print(f"Total: {added} adicionadas, {fixed} atualizadas, {removed} removidas.")
+
+    # Cotações e indicadores do mercado financeiro
+    try:
+        import fetch_market
+        fetch_market.main()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[AVISO] Mercado: {exc}")
     return 0
 
 

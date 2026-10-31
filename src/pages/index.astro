@@ -8,6 +8,7 @@ import NewsMini from '../components/NewsMini.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Creator from '../components/Creator.astro';
 import Icon from '../components/Icon.astro';
+import MarketPanel from '../components/MarketPanel.astro';
 import { CATEGORIES } from '../consts';
 import { getArtigos, getNoticias, timeAgo } from '../lib';
 
@@ -51,6 +52,13 @@ const lastUpdate = noticias[0]?.data.pubDate;
       </div>
     </section>
   )}
+
+  <section>
+    <div class="container">
+      <div class="section-head" style="--accent:#eab308"><h2>Mercado agora</h2><a href="/categoria/mercado/">Economia e mercado →</a></div>
+      <MarketPanel compact />
+    </div>
+  </section>
 
   <section>
     <div class="container">
