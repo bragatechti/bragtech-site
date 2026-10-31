@@ -5,7 +5,7 @@ const { full = false } = Astro.props;
 const stack = ['Microsoft 365', 'Copilot', 'Claude', 'Gemini', 'Azure OpenAI', 'Entra ID', 'Azure', 'AWS', 'Google Cloud', 'Proxmox', 'Fortinet', 'Zabbix', 'Grafana', 'ITIL', 'LGPD'];
 ---
 <div class="creator">
-  <div><div class="avatar" aria-hidden="true">RB</div></div>
+  <div><div class="avatar"><img src="/raul-bragagnolo.jpg" alt="Foto de Raul Bragagnolo" width="180" height="180" loading="lazy" /></div></div>
   <div>
     <span class="kicker">Quem está por trás da BragaTech</span>
     <h2>{CREATOR.name}</h2>
@@ -42,5 +42,6 @@ const stack = ['Microsoft 365', 'Copilot', 'Claude', 'Gemini', 'Azure OpenAI', '
   </div>
 </div>
 <style>
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 25%; display: block; }
   .btn :global(svg) { width: 18px; height: 18px; }
 </style>
