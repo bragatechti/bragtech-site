@@ -6,7 +6,10 @@ const brl = (id: string, v: number) => (id.startsWith('BTC') ? 'R$ ' + fmt(v, 0)
 const upd = data.updated ? new Date(data.updated).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', dateStyle: 'short', timeStyle: 'short' }) : null;
 const bolsas = compact ? data.bolsas.slice(0, 3) : data.bolsas;
 const juros = compact ? data.juros.slice(0, 2) : data.juros;
-const empty = !data.moedas.length && !data.bolsas.length && !data.juros.length;
+const moedas: any[] = data.moedas.length ? data.moedas : [
+  { id: 'USD-BRL', nome: 'Dólar' }, { id: 'EUR-BRL', nome: 'Euro' }, { id: 'GBP-BRL', nome: 'Libra' }, { id: 'BTC-BRL', nome: 'Bitcoin' },
+];
+const empty = false;
 ---
 <div class="market" id="market">
   {empty ? (
@@ -14,11 +17,11 @@ const empty = !data.moedas.length && !data.bolsas.length && !data.juros.length;
   ) : (
     <>
       <div class="mk-grid">
-        {data.moedas.map((m: any) => (
+        {moedas.map((m: any) => (
           <div class="mk" data-pair={m.id}>
             <span class="mk-name">{m.nome}</span>
-            <strong class="mk-val">{brl(m.id, m.valor)}</strong>
-            <span class={`mk-var ${m.var >= 0 ? 'up' : 'down'}`}>{m.var >= 0 ? '▲' : '▼'} {fmt(Math.abs(m.var))}%</span>
+            <strong class="mk-val">{m.valor != null ? brl(m.id, m.valor) : '—'}</strong>
+            {m.var != null ? <span class={`mk-var ${m.var >= 0 ? 'up' : 'down'}`}>{m.var >= 0 ? '▲' : '▼'} {fmt(Math.abs(m.var))}%</span> : <span class="mk-var neutral">carregando…</span>}
           </div>
         ))}
         {bolsas.map((b: any) => (
