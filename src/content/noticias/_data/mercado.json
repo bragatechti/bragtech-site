@@ -1,23 +1,23 @@
 {
-  "updated": "2026-10-31T12:56:28Z",
+  "updated": "2026-10-31T13:01:42Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
       "valor": 5.4397,
-      "var": 9.67
+      "var": 1.02
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
       "valor": 6.0668,
-      "var": 9.59
+      "var": 0.82
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
       "valor": 7.2814,
-      "var": 9.76
+      "var": 1.1
     }
   ],
   "bolsas": [
@@ -26,42 +26,42 @@
       "nome": "Ibovespa",
       "regiao": "Brasil",
       "valor": 167921.8,
-      "var": -18.12
+      "var": -0.75
     },
     {
       "id": "^GSPC",
       "nome": "S&P 500",
       "regiao": "EUA",
       "valor": 7580.07,
-      "var": -0.57
+      "var": -1.82
     },
     {
       "id": "^IXIC",
       "nome": "Nasdaq",
       "regiao": "EUA",
       "valor": 25436.998,
-      "var": -2.0
+      "var": -2.86
     },
     {
       "id": "^DJI",
       "nome": "Dow Jones",
       "regiao": "EUA",
       "valor": 51770.31,
-      "var": -0.85
+      "var": -1.09
     },
     {
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
       "valor": 6131.31,
-      "var": 0.25
+      "var": -1.22
     },
     {
       "id": "^N225",
       "nome": "Nikkei 225",
       "regiao": "Japão",
       "valor": 63290.11,
-      "var": 1.77
+      "var": -2.12
     }
   ],
   "juros": [
@@ -70,7 +70,7 @@
       "nome": "Selic (meta)",
       "valor": 13.75,
       "unidade": "% a.a.",
-      "ref": "04/11/2026"
+      "ref": "vigente"
     },
     {
       "id": "cdi",
