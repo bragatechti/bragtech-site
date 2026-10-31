@@ -17,8 +17,8 @@ export const getCategory = (slug: string) => CATEGORIES.find((c) => c.slug === s
 export const categoryName = (slug: string) => getCategory(slug).name;
 
 export const CREATOR = {
-  name: 'José Raul Bragagnolo Filho',
-  role: 'Coordenador de Infraestrutura, Segurança da Informação e IA',
+  name: 'Raul Bragagnolo',
+  role: 'Especialista em Infraestrutura, Cibersegurança e Inteligência Artificial',
   headline: 'Gestão de TI • Infraestrutura • Cloud (Azure/AWS) • Cybersecurity • Plataformas de IA',
   linkedin: 'https://www.linkedin.com/in/joseraulbragagnolofilho/',
   location: 'São Paulo, Brasil',
