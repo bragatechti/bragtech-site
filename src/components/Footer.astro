@@ -1,5 +1,6 @@
 ---
-import { SITE_TAGLINE, CATEGORIES, CREATOR } from '../consts';
+import { SITE_TAGLINE, CATEGORIES, CREATOR, INSTAGRAM } from '../consts';
+import Icon from './Icon.astro';
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
@@ -8,6 +9,10 @@ const year = new Date().getFullYear();
       <div>
         <a class="brand" href="/"><img src="/logo-emblem.webp" alt="" width="70" height="46" style="height:40px;width:auto" /><span class="brand-text"><strong>BragaTech</strong></span></a>
         <p style="margin-top:.8rem">{SITE_TAGLINE} Curadoria diária de notícias e análises sobre IA, cibersegurança, cloud e infraestrutura.</p>
+        <div class="social">
+          <a href={INSTAGRAM} target="_blank" rel="noopener" aria-label="Instagram da BragaTech" class="social-ig"><Icon name="instagram" /><span>@bragagnolotechoficial</span></a>
+          <a href={CREATOR.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+        </div>
       </div>
       <div>
         <h4>Editorias</h4>
@@ -25,6 +30,7 @@ const year = new Date().getFullYear();
       <div>
         <h4>Acompanhe</h4>
         <ul>
+          <li><a href={INSTAGRAM} target="_blank" rel="noopener">Instagram</a></li>
           <li><a href={CREATOR.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="/rss.xml">Feed RSS</a></li>
           <li><a href="/privacidade/">Política de Privacidade</a></li>
@@ -37,3 +43,10 @@ const year = new Date().getFullYear();
     </div>
   </div>
 </footer>
+<style>
+  .social { display: flex; gap: .6rem; margin-top: 1.1rem; flex-wrap: wrap; }
+  .social a { display: inline-flex; align-items: center; gap: .5rem; height: 40px; padding: 0 .75rem; border-radius: 10px; border: 1px solid var(--border-strong); color: var(--text); background: rgba(30,155,255,.06); font-size: .88rem; font-weight: 600; transition: border-color .2s, box-shadow .2s, transform .2s; }
+  .social a:hover { text-decoration: none; border-color: var(--cyan); box-shadow: var(--glow); transform: translateY(-2px); }
+  .social :global(svg) { width: 20px; height: 20px; }
+  .social-ig :global(svg) { color: #e1306c; }
+</style>
