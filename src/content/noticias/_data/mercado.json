@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-01T09:55:58Z",
+  "updated": "2026-11-01T21:47:28Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4397,
-      "var": 1.02
+      "valor": 5.3817,
+      "var": -0.06
     },
     {
       "id": "EUR-BRL",
@@ -16,8 +16,8 @@
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.2814,
-      "var": 1.1
+      "valor": 7.2149,
+      "var": 0.18
     }
   ],
   "bolsas": [
