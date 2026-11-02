@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-02T10:19:25Z",
+  "updated": "2026-11-02T21:54:21Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4406,
-      "var": 0.02
+      "valor": 5.4366,
+      "var": -0.06
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.1027,
-      "var": 0.59
+      "valor": 6.0835,
+      "var": 0.28
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.3091,
-      "var": 0.38
+      "valor": 7.2892,
+      "var": 0.11
     }
   ],
   "bolsas": [
@@ -32,29 +32,29 @@
       "id": "^GSPC",
       "nome": "S&P 500",
       "regiao": "EUA",
-      "valor": 7580.07,
-      "var": -1.82
+      "valor": 7541.4,
+      "var": -0.51
     },
     {
       "id": "^IXIC",
       "nome": "Nasdaq",
       "regiao": "EUA",
-      "valor": 25436.998,
-      "var": -2.86
+      "valor": 25164.316,
+      "var": -1.07
     },
     {
       "id": "^DJI",
       "nome": "Dow Jones",
       "regiao": "EUA",
-      "valor": 51770.31,
-      "var": -1.09
+      "valor": 51983.98,
+      "var": 0.41
     },
     {
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
-      "valor": 6156.67,
-      "var": 0.41
+      "valor": 6176.06,
+      "var": 0.73
     },
     {
       "id": "^N225",
@@ -77,7 +77,7 @@
       "nome": "CDI",
       "valor": 13.65,
       "unidade": "% a.a.",
-      "ref": "29/10/2026"
+      "ref": "30/10/2026"
     },
     {
       "id": "ipca",
