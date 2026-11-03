@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-02T21:54:21Z",
+  "updated": "2026-11-03T10:05:46Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4366,
-      "var": -0.06
+      "valor": 5.3837,
+      "var": -0.97
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.0835,
-      "var": 0.28
+      "valor": 6.0283,
+      "var": -0.91
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.2892,
-      "var": 0.11
+      "valor": 7.2281,
+      "var": -0.84
     }
   ],
   "bolsas": [
@@ -39,7 +39,7 @@
       "id": "^IXIC",
       "nome": "Nasdaq",
       "regiao": "EUA",
-      "valor": 25164.316,
+      "valor": 25164.363,
       "var": -1.07
     },
     {
@@ -53,8 +53,8 @@
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
-      "valor": 6176.06,
-      "var": 0.73
+      "valor": 6135.67,
+      "var": -0.65
     },
     {
       "id": "^N225",
