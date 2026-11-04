@@ -1,0 +1,8 @@
+---
+title: "Selic: mercado muda projeções e vê decisão do Copom como teste de credibilidade do BC - Estadão"
+summary: "Selic: mercado muda projeções e vê decisão do Copom como teste de credibilidade do BC Estadão"
+pubDate: 2026-11-04T08:30:00Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPQU9yeTZCVUs1Wjd2S3ZaZXZUN3RoVmZOMm1Jd0FnVFhLUVBkNHplM0RpblRsWWMyS0I1VTVTX09BT0JoOFVUY3dqWG5pVm1mYXoyMU8wVzZYbTd1MG1jUzdrX1VSMThTQjR5TFJ5amdIU0ttUlNFRWQ3dkdmZVJuZnlkZlRnZ1R4aDJDeW1IaDVHS2xWTlFhdE9Oam1jaGMxb1c4ZVFmbjJBTnNBRWpiQm5kamRfOHpvU3FmeG9lcVpEQVF5VXZkMkx4eW54N081SVFSZXo1aG84b3fSAeABQVVfeXFMTzNuVlVHV2drMTdSQWpEelV5bVJtb2t5S3VSNHNwTzdyT05LYUFwelhlQlZWaEtZeHJ4bWp5MWVTeHZac0dXeFRRanhlMWtYSFZDUndKdzdTbVI1b2FHc0VPRTJ0aFR1VklpX3NnXzlQTEpnd0ViSm1FR3gzTExaS0NwNjR2dExvXzVXcmVTSFFlcGF4MFN2bnV0QXpJUnc5ZDg0LWM4eGZyLTR3dzRubTZFUFNReWZfZW52eUJtZFF1TGJhZEtJcVFsUVRIaGJROFAxdnBrbHJZcmVQYjl4VEI?oc=5"
+---
