@@ -1,0 +1,8 @@
+---
+title: "Ibovespa sobe à espera de decisão do Copom; Itaú e Vale avançam, mas Petrobras tomba 3% - Estadão"
+summary: "Ibovespa sobe à espera de decisão do Copom; Itaú e Vale avançam, mas Petrobras tomba 3% Estadão"
+pubDate: 2026-11-04T07:29:00Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWXNNR2MtNE52Ny16dUVjNWUtUllBZW1mSlBmQ3lJbml3NUNyemRhaWwxTDdnUFBrV0VSYjdvSFR2TXJPamEyMDlkdDNmaFowRXdUckVPSzJpaUY5V1lKa3YzX0RkZnZIZ2JhR2RxX2dfdDY4QlYtcXhtTWF0cV9VbU92X2VkWHI1WUM1WFhrbnVpT0ZhM2oxWmo2UG5pVHc0SlYtMFRiZE9QMUFlalpDMEVwUTZ5TXM0cEFmcTRLSmlsZDIxNG15dnpwa04wSDVUWXQwOTJUTnZtUdIB3wFBVV95cUxPV1FZbktjOGVIVFF4UlVkeWk0TTJkblJjN1FuckZtVnJQcUs3QkVMVF9CM0dPYXVSRkx1YjlkMmdrLWNhdFliUV9iNFZOelY2S1hqTHdwVHYwNGZSUGtXTHJuOURrSzRiUWJORFpWbzllTWtGNTVoZVpmSG9RcVROSWNZWHZodXJrWGVJYU43WUdVRzRDUXdBREI5YXJOTGRNTERJR25BS3VFVWZ6UHNkdXphdVNxOWlhdlVfaHlSVTdvZFQzZEc0Tjd1eHdXQUFvZlpwRE5VQmpDeTFkVDJv?oc=5"
+---
