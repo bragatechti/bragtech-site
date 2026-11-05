@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-05T10:17:36Z",
+  "updated": "2026-11-05T21:57:53Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4623,
-      "var": 0.07
+      "valor": 5.4904,
+      "var": 0.59
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.1339,
-      "var": 0.08
+      "valor": 6.1735,
+      "var": 0.72
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.3537,
-      "var": 0.02
+      "valor": 7.4018,
+      "var": 0.67
     }
   ],
   "bolsas": [
@@ -25,36 +25,36 @@
       "id": "^BVSP",
       "nome": "Ibovespa",
       "regiao": "Brasil",
-      "valor": 167563.47,
-      "var": 1.23
+      "valor": 166191.45,
+      "var": -0.82
     },
     {
       "id": "^GSPC",
       "nome": "S&P 500",
       "regiao": "EUA",
-      "valor": 7688.62,
-      "var": 1.58
+      "valor": 7353.73,
+      "var": -4.36
     },
     {
       "id": "^IXIC",
       "nome": "Nasdaq",
       "regiao": "EUA",
-      "valor": 25736.514,
-      "var": 1.44
+      "valor": 24314.998,
+      "var": -5.52
     },
     {
       "id": "^DJI",
       "nome": "Dow Jones",
       "regiao": "EUA",
-      "valor": 53356.12,
-      "var": 3.03
+      "valor": 51523.06,
+      "var": -3.44
     },
     {
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
-      "valor": 6291.02,
-      "var": 0.4
+      "valor": 6231.54,
+      "var": -0.55
     },
     {
       "id": "^N225",
