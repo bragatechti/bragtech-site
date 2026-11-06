@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-05T21:57:53Z",
+  "updated": "2026-11-06T10:15:09Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4904,
-      "var": 0.59
+      "valor": 5.487,
+      "var": -0.3
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.1735,
-      "var": 0.72
+      "valor": 6.1387,
+      "var": -0.56
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.4018,
-      "var": 0.67
+      "valor": 7.3554,
+      "var": -0.61
     }
   ],
   "bolsas": [
@@ -53,15 +53,15 @@
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
-      "valor": 6231.54,
-      "var": -0.55
+      "valor": 6179.5,
+      "var": -0.84
     },
     {
       "id": "^N225",
       "nome": "Nikkei 225",
       "regiao": "Japão",
-      "valor": 61077.9,
-      "var": -1.79
+      "valor": 57434.77,
+      "var": -5.96
     }
   ],
   "juros": [
@@ -77,7 +77,7 @@
       "nome": "CDI",
       "valor": 13.65,
       "unidade": "% a.a.",
-      "ref": "03/11/2026"
+      "ref": "04/11/2026"
     },
     {
       "id": "ipca",
