@@ -1,0 +1,8 @@
+---
+title: "OAB pede adiamento de implementação da Reforma Tributária para 2028 - O GLOBO"
+summary: "OAB pede adiamento de implementação da Reforma Tributária para 2028 O GLOBO"
+pubDate: 2026-11-04T20:50:53Z
+category: mercado
+source: "Google Notícias · Reforma Tributária"
+sourceUrl: "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUk4tUjY2d2RxUlVha3lqYW5HWGdaQUZBdDZoMWNnRVNycS0xNk5TV2hfSmFHSzZHS0dJZTUxT3NWaFkyUTYtYXN3TEN0VVBoQ2hqVS1fTEJyRTZPMnBQeDcyMHVja3VyWklGdXd1STBDNG1tZW16RGRabHRSZ1R5RFQ1VFhreGM1V05PTWtYWEF0WFFpVW9TWWVYM1p0X2tiaHcyb2Jfdmlqdm5DTnN6MEozRWlDdEctSnlZcjMtSlZBTEJv0gHTAUFVX3lxTE1XQlNnTXVTXzd1LVIwRkR5VkxhamFMdmhlb1BQTUxJOVk0ZkcwdW9LN3Z2RjV5Y3pEaDc0ZF91cDRqZ2RRNDliN3NJWkRiQ1ZyQ3lPOFpHTFQ3TzktRUxyc0RYaXBEeVBSekRZODRUQ1hRYnVDNnNnM2dqaHFEOXJBOFZMd1RfNUtyYWwzaDZTYjFBUHlSX0FvMHN1dnp1b2J6WFNkSFd3eFRwLXk4WTI0UTFKTWVDYktxXzkzT2NraTBHUk9GWWg4Y2h6clRUQ21ZQzA?oc=5"
+---

@@ -1,0 +1,8 @@
+---
+title: "Grupos de advogados pedem que reforma tributária seja adiada - Valor Econômico"
+summary: "Grupos de advogados pedem que reforma tributária seja adiada Valor Econômico"
+pubDate: 2026-11-03T21:59:07Z
+category: mercado
+source: "Google Notícias · Reforma Tributária"
+sourceUrl: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRHVwYmVTLTh3bUtvTW90YTFza3c1NndiMjdJTm1xaG5OamhMbGRvcUdma1ZUaldZT3hKbUwyTE9aZzBXU2ZUYUZUdWxhalY3TXV4UDVoZjZkODlYLVNZSnY0RUpxcXJwaWhHNU9tb0pQZTlkNTRvZ1l1bXllQjJudG16TUhrTWpVTWdQeVRHOEpDT3pTMTI4dTlneEJtY0YzQzE0UHRjY1FoWmxVRGx3eVkxTG5mMnJQUGI40gHKAUFVX3lxTE4yVDNPM09SX01DWFYyQlJ1X0J4S2NzbUVzb2Vaa3BkQVl2M3RfWHA0LW1vSlRlZkp2b3htVXM1SHREZnRkSGZMTllBM0szazVjVnA1bHVOTVhaZXlCVDBSUGxJWjJWTnctMkswblo3ZF9leXptZE41em9GNVRSTmRxYzI1LS01VUpCVmpqRHAzMlY4UEhXZGVLd2Z1NXhVN1YyUnFCMTJxbDJEUEVzenFDTnFMdWdiWXZPZ0REejhndy1qM1FQcDkzaWc?oc=5"
+---
