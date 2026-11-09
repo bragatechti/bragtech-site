@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-08T21:48:37Z",
+  "updated": "2026-11-09T10:11:26Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.4959,
-      "var": -0.14
+      "valor": 5.5031,
+      "var": 0.13
     },
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.1284,
-      "var": -0.72
+      "valor": 6.1592,
+      "var": 0.44
     },
     {
       "id": "GBP-BRL",
       "nome": "Libra",
-      "valor": 7.3428,
-      "var": -0.78
+      "valor": 7.3828,
+      "var": 0.5
     }
   ],
   "bolsas": [
@@ -53,15 +53,15 @@
       "id": "^STOXX50E",
       "nome": "Euro Stoxx 50",
       "regiao": "Europa",
-      "valor": 6170.49,
-      "var": -0.98
+      "valor": 6221.17,
+      "var": 0.82
     },
     {
       "id": "^N225",
       "nome": "Nikkei 225",
       "regiao": "Japão",
-      "valor": 57434.77,
-      "var": -5.96
+      "valor": 58775.5,
+      "var": 2.33
     }
   ],
   "juros": [

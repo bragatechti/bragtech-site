@@ -1,0 +1,8 @@
+---
+title: "Copom precisará observar o impacto de diversos choques para voltar a reduzir a taxa Selic - Estadão"
+summary: "Copom precisará observar o impacto de diversos choques para voltar a reduzir a taxa Selic Estadão"
+pubDate: 2026-11-06T20:35:00Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTEhOSDlPVWhZWXIzVFhLd0kxS2FLUk1PVDJEYXVJV21YWHBHdktlNmZaajhCSjFIZEljZWcta1NFYmhJS3diNnMzcEV1c2dsUzZlQkVuUWdCYk93Yml0UUE3VjA0STY4c3lTR3BVeXVxaVBrczNWYWtDYW9VTXJZdTVSNUxsNEZZSmxickZnc09lbGZSRUtmZVN2ZzNaZHJvYlFCeTREZ25IZGdYWXBuQWhtRHA5clFsTWZmYk9Jcmc2ZzJHMWxVTVczMFRYMWZadXNwNUo4VUtBZjBE0gHiAUFVX3lxTE96ZTEwWEhnaVd0RklMT1NtV2NScV9rb3l3N3BXSGJUejhXZ18xV2E1MHlvZFYydGxFLWFIWF94c2tSU3MwdGtDVGJfcVJoMG55ZndFbkhWOUxEQ2ZhSU9jN0JQSWxqSEFvb3p0VG92cFI5eFZwQTc3d084RGE3TWw2VkFYZW00M3BXUUVVaWxZd3htQ2xrYmFVS29oY3FJQS1LQ3pJRU9GOWxuWF9TYjNnbmEzMmJlV2NZSUpTR21sUjRySVN3MmpJdUplSkdYcUowd3NySmRfVW5nNXBXYW9BVVE?oc=5"
+---
