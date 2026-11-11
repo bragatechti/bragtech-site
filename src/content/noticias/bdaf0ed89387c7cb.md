@@ -1,0 +1,8 @@
+---
+title: "Juros curtos fecham em queda e longos sobem com ata do Copom e pressão externa - Valor Econômico"
+summary: "Juros curtos fecham em queda e longos sobem com ata do Copom e pressão externa Valor Econômico"
+pubDate: 2026-11-10T20:41:50Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTjM2ZWZHeHdpemxIcjFxWXUzWnBFRHlWTFVBYlhkZ2dscDlqbWlwZjAtUVduSXBWdThSMnFYZE1sM0Y5TUFuQXBwc3hTeFprY2pNeUR6dmFJb010QlBSaTFkNHNFYjgwSjR2Y3VYa3ZVSEMzNXFfSmUwelN3UWhmalBYYTJwcERqMXgyMlk0d2xCaUotcWk4NGJOSHRQQnJLV2lUTkRWaV9XSzJvem43ZUxmcEZwZVZlU3NPLUFndDJlOTBxejJJbDFXemFCbEItNGfSAeABQVVfeXFMT084bnNGMGV0Yk9aRnBBR0JadDlaNTNsZ1l0MlhneW9FVGd2RTJXQWpsbWxFM0RCSzJvTU0tWlM1MG12WXlOTmNyeWtDOThUYkZERkhIS0t1a3h6cjgtNkljc2dERDF6T29rUU1Yb19DS0p5VE5FVk5uNy02djlDNDlwSjZGVWYzemdKS0t5TTA3YS1mVHIwSHp2enpmeHNoMWlRZjk0YkJaTkw0azF5NHBYM2V6VlJTMEMweC1tRjVmMzcwdV9uSGxSUF9OV2lYUTF1MXBWWGN2MGFBZ0hMbjE?oc=5"
+---
