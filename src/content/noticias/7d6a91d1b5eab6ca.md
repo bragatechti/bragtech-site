@@ -1,0 +1,9 @@
+---
+title: "BB aponta recusa de produtores em renegociar dívidas do agro"
+summary: "A presidenta do Banco do Brasil, Tarciana Medeiros, afirmou nesta quinta-feira (12) que parte dos médios e grandes produtores rurais inadimplentes se recusou a pagar dívidas, renegociar operações e apresentar novas garantias à instituição, mesmo após a oferta de programas de…"
+pubDate: 2026-11-12T20:33:00Z
+category: mercado
+source: "Agência Brasil"
+sourceUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bb-aponta-recusa-de-produtores-em-renegociar-dividas-do-agro"
+image: "https://agenciabrasil.ebc.com.br/ebc.png?id=1708599&o=rss"
+---
