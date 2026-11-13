@@ -16,7 +16,7 @@ const clean = (s, max) => String(s ?? '').replace(/[\r\n]+/g, ' ').trim().slice(
 
 export async function onRequestPost({ request, env }) {
   const origin = request.headers.get('Origin') || '';
-  if (origin && !ALLOWED_ORIGINS.includes(origin) && !origin.endsWith('.bragtech-site.pages.dev')) {
+  if (!origin || (!ALLOWED_ORIGINS.includes(origin) && !origin.endsWith('.bragtech-site.pages.dev'))) {
     return json({ success: false, message: 'Origem não permitida.' }, 403);
   }
   if (!env.BREVO_API_KEY) return json({ success: false, message: 'Envio não configurado.' }, 503);
@@ -28,6 +28,23 @@ export async function onRequestPost({ request, env }) {
     return json({ success: false, message: 'Requisição inválida.' }, 400);
   }
   if (data.botcheck) return json({ success: true });
+
+  // Cloudflare Turnstile: só é exigido quando o segredo TURNSTILE_SECRET_KEY estiver configurado.
+  if (env.TURNSTILE_SECRET_KEY) {
+    const form = new FormData();
+    form.append('secret', env.TURNSTILE_SECRET_KEY);
+    form.append('response', String(data.turnstile || ''));
+    const ip = request.headers.get('CF-Connecting-IP');
+    if (ip) form.append('remoteip', ip);
+    let ok = false;
+    try {
+      const v = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: form });
+      ok = !!(await v.json()).success;
+    } catch {
+      ok = false;
+    }
+    if (!ok) return json({ success: false, message: 'Verificação anti-robô falhou.' }, 403);
+  }
 
   const nome = clean(data.nome, 100);
   const email = clean(data.email, 120);

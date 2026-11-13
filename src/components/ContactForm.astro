@@ -20,10 +20,13 @@ import { CONTACT_FORM_KEY } from '../consts';
     <label>Assunto<textarea name="assunto" required maxlength="3000" rows="5" placeholder="Conte o motivo do seu contato"></textarea></label>
     <label class="cf-check"><input type="checkbox" name="consentimento" value="sim" required /> <span>Concordo com o uso dos meus dados apenas para responder a este contato, conforme a <a href="/privacidade/">Política de Privacidade</a>.</span></label>
 
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAF_4lh9fQPovkgvX" data-theme="dark" data-language="pt-br" data-size="flexible"></div>
     <button type="submit" class="btn">Enviar mensagem</button>
     <p class="cf-status" role="status" aria-live="polite"></p>
   </form>
 </div>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <script>
   const form = document.getElementById('contactForm') as HTMLFormElement | null;
@@ -94,7 +97,7 @@ import { CONTACT_FORM_KEY } from '../consts';
           const r = await fetch('/api/contato', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify({ nome: data.nome, email: data.email, celular: data.celular, whatsapp: data.whatsapp, assunto: data.assunto, consentimento: data.consentimento, botcheck: '' }),
+            body: JSON.stringify({ nome: data.nome, email: data.email, celular: data.celular, whatsapp: data.whatsapp, assunto: data.assunto, consentimento: data.consentimento, botcheck: '', turnstile: data['cf-turnstile-response'] || '' }),
           });
           const j = await r.json();
           sent = !!j.success;
@@ -116,6 +119,7 @@ import { CONTACT_FORM_KEY } from '../consts';
         status.innerHTML = 'Não foi possível enviar agora. Tente novamente ou escreva para <a href="mailto:contato@bragagnolo.tec.br">contato@bragagnolo.tec.br</a>.';
         status.classList.add('err');
       } finally {
+        try { (window as any).turnstile?.reset(); } catch {}
         btn.disabled = false;
         btn.textContent = 'Enviar mensagem';
       }
@@ -143,6 +147,7 @@ import { CONTACT_FORM_KEY } from '../consts';
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .btn { align-self: flex-start; }
   .btn[disabled] { opacity: .6; cursor: wait; }
+  .cf-turnstile { min-height: 65px; }
   .cf-status { margin: 0; font-size: .92rem; min-height: 1.2em; }
   .cf-status.ok { color: #4ade80; }
   .cf-status.err { color: #f87171; }
