@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T09:58:26Z",
+  "updated": "2026-11-15T21:51:52Z",
   "moedas": [
     {
       "id": "USD-BRL",
@@ -10,8 +10,8 @@
     {
       "id": "EUR-BRL",
       "nome": "Euro",
-      "valor": 6.2455,
-      "var": -0.04
+      "valor": 6.2482,
+      "var": -0.0
     },
     {
       "id": "GBP-BRL",
