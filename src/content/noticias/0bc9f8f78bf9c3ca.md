@@ -1,0 +1,8 @@
+---
+title: "'Cashback' da reforma tributária: cerca de 70 milhões de pessoas começam a receber o benefício em janeiro; veja o que é preciso fazer - G1"
+summary: "'Cashback' da reforma tributária: cerca de 70 milhões de pessoas começam a receber o benefício em janeiro; veja o que é preciso fazer G1"
+pubDate: 2026-11-15T03:00:00Z
+category: mercado
+source: "Google Notícias · Reforma Tributária"
+sourceUrl: "https://news.google.com/rss/articles/CBMikgJBVV95cUxNamprV3FFTTdzdFQzWVowR2QwTXJScGhBYkxCT19pbVFiNDVXbDlPRTQ0ZTFlNnhZcVR6VkMtejRObmxEWHQwQURDTGRQenFsb09HZG9kTjBVQW8tdEU4SUJGS3kzdlhtMFdiYWc1TG5FS1dyMHZPaTU4Q2YyTVkwWFlCX2NOV0tKRXhGT1pQeERmcS1CUmdjQ0d5Mjl4aGN1NlZqZHhzVGtxcjNkWWFCeU0wOEUxSWl4LUp5TlFRbTQ3OVV1N19COFRDMVFRZzZfZWtQTk5OOU5Dc3JzR0VuUjFwWGNBSDFvbnhieTBhSXY0QXBJeTB1d1p1QzN3MkpPMzgwZnVpdmd3bldFZUUyZlRn0gGgAkFVX3lxTE1sTEJmVXAwdmZqeWFjSnhtZDJnXzl3aFR4MS01TldkOTRBOGdaWXZ4RF9wMFp0cVJSd3M1bDJHVElvbzE3aW91V3RVS1pHQWg1S3hrWl82aVRXNWxlYXBPbmt0azBQeENkZ0Ffc2FmNWVBS1Z5ZTRBRmFBc2F0YVlPVkFYc09Jd0VSSnN2YUVQVGdRS2lTWGFuUHkycXVYQk1pMVkyRkE4dER5dWFibkhrekZyRjJMYW5PR3NRZHZOUkxaS0l6eTdFeTJISXp3M1ktUE9JYjZTTExBUGdaaWd0VG5GRXMxOHJkckNSdGdyQjk4eTFGalZWLW5zdGthcjZFTkozV1hyRngyeVNPeVNxUkF1WUh2RUk1T2Y2X0pyXw?oc=5"
+---
