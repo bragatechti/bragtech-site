@@ -1,0 +1,9 @@
+---
+title: "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses"
+summary: "A malicious widget can bypass the security filter that Telegram added to its Android app last week and run code outside it, according to NebuSec, a security company. Widgets are small interactive blocks that bots send inside chat messages, and their JavaScript runs on the user's…"
+pubDate: 2026-11-17T19:34:20Z
+category: ciberseguranca
+source: "The Hacker News"
+sourceUrl: "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html"
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpVlnQrxQ-QDawosxNpQdcPtITzUQKuYeqUtOk0gctwRhi-8P9Qi_9L72cSwkHRdGNS94HaIDHEkqeb0NTPw3mIZyFstN3ZM1FlUoMweKPNz4iTkAkxlxFSNdE92DAFlfLMFe0gTXWE78eOHROSbISVMgdmFOeVhm0SS2-1wXrNxPGknTVMGroQ0pRqYg/s1600/telegram-rce.jpg"
+---
