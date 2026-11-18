@@ -1,0 +1,8 @@
+---
+title: "MS propõe nova divisão de receitas após reforma tributária - Campo Grande News"
+summary: "MS propõe nova divisão de receitas após reforma tributária Campo Grande News"
+pubDate: 2026-11-17T22:46:00Z
+category: mercado
+source: "Google Notícias · Reforma Tributária"
+sourceUrl: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa3VTQk1PT2t5YnRUM0ZON1dQeUVFcExlXzFYbTVCWU16Q2lwamRsYTE1N0hDMjBqUzl3aDNDNDVVOU56Um1DdmtGaXVMMlR4a1gyaWZjVy1pX2M1ZFY3M3M5QnBjQnc1aWJpWXp2dllLMUVEMGNDTmFEY1NaNl9Rbm5USS1IaV9oVjhJdC11NlZQMVNCU2c4d2V4QjQwZ240WGxLbUt6MU5Tb0lEZnN30gGvAUFVX3lxTE9QMm9XWURtd0UxVW1sbkwtNk9fS0NxZ2NBVWFQalFHSlhsaGJDMzk5TXJCZC1hYXQwQ0htbUs2VEt6ampOQmp2akVPQ0xuR0ZzcUNuSjd0Z0FEYy1oVkZpd3cwMjE2VW4zZXpPZkFNLS1UX2x1VzhJSkxoVzlDX2p5VFpHTEIxYl9qaGttblNtWnpCX3J6dDlXOU80bDRpR3dPNXpldjJqMHctNHlfMVk?oc=5"
+---
