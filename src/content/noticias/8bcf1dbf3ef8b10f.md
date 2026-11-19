@@ -1,0 +1,8 @@
+---
+title: "Reforma tributária em 2027: o que a empresa precisa decidir antes de 1o de janeiro - Valor Econômico"
+summary: "Reforma tributária em 2027: o que a empresa precisa decidir antes de 1o de janeiro Valor Econômico"
+pubDate: 2026-11-19T20:19:48Z
+category: mercado
+source: "Google Notícias · Reforma Tributária"
+sourceUrl: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQeW1HMEZtWk1YUURrVXhGNWtFSVFkaExKY25xYlJqWXg0a0Vra2hidzA5a2xGeGczZTJtS2tSQ0kxbTNpbzFqQ1BJTEtFajhKWGV2Q3BkVlFFVkRzb3V2bElpN2F4RS1EYkxDNkZDMlR3NkJPSVE3M2IyU0M5cWFYOWkybjNIQklnSVptTTJjR3k2QW1UdmRwcnhQN0QzMkJNV0FpbFE5TFBMaE5rM0s4ZWNDRGhkWkhSby11aVNoZTB4TjJueE9XOEtZblFrcnZzZjlhVzZWcVdCY1JOVGhrY2MxOEJ3LXN1SVVTV9IB-wFBVV95cUxOMGdUbmlLVjc3TE9pZkR2R0hDZWw3QUYyT3hCLVEwTDFmTHFCeTBVdTJ3c09CZEdoRk5HaFRlclkzU1pMZnFSZ21ZVW8taHVJZ2Z3TXBkZEJZVVR6eHZ4V3NYTk5ZUXhldzZhbXB2Yy05UkhFS0NfUUFzems1VjVYRDdRczQta084eXhXVWZRcnI3Tlk5WkNLQnNmc0JwV2RUMGxQRTdaWkVkUHZzNkxDRHVfZzlkRVc0Sm9yNnEtRUNZSU1tN3RVdFR3cGtQRTY0dUlXaUZacG10Q1lBUURZTUtFbFI4TnN1SzJTWnJQMUs3RkVBMGxsSnlvbw?oc=5"
+---

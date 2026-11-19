@@ -1,0 +1,8 @@
+---
+title: "Campanha Copom Conectado é realizada em Teófilo Otoni - G1"
+summary: "Campanha Copom Conectado é realizada em Teófilo Otoni G1"
+pubDate: 2026-11-19T17:43:23Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSUNyWF9PWEhQNWR1a2I5bFJPNjhGbGstbk8xRGV3RnpoaThkQjdfOHhXYjk5N2tkSDY0dFl1VWpNWkNjMWxoZ2R4NklsVld6c0p5QjhiX20yOW9YakhlRnV3S1llc0JGM0cyOEIyRlViYVBwQjR6RUhoSU5sLUxtZGhDSS1rX1ZEenVSVy04MHI4RTFSMG5ZbExXcGhrcWhta0I4Z2lLR0tBUVRfQ1d3MDZjbElQN1g3WnNsVnJQWdIBzgFBVV95cUxQRDJNUUo3cEdyYUYwaGVDZ2J6OV9oZk5pR3BOY0VhVGdWQ3JwYUV6MUd6UHZGV3AzNHJpRWdwSUdfYmV1OW03MkFGb09VdHlaWlRvNG5QT3FjRW0xbk5wUVVjODdmUU9WUVN2WGNZQUpQY1dnMmtyQTV3ZXl2R1ktWjlLalI1Tk5GWmJDRERtUy1mOU5VVnRUNnpXMjB6Q0hsdU9NVFdCVEZJNXp4QmdQSXBEQXBCUWd1anc0WkNKSjhoU1dLVEFXUDNJVDF5dw?oc=5"
+---

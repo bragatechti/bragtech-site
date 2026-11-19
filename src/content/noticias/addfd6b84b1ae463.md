@@ -1,0 +1,8 @@
+---
+title: "Os FIIs de shoppings mais casca grossa para sobreviver à Selic alta e na mira do BTG - Investidor10"
+summary: "Os FIIs de shoppings mais casca grossa para sobreviver à Selic alta e na mira do BTG Investidor10"
+pubDate: 2026-11-19T20:32:00Z
+category: mercado
+source: "Google Notícias · Selic e Copom"
+sourceUrl: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRnlsVHZVcHZtWlc2N2VVSi1kWHJqNThoMGRvV2dFWnZFWXBKT0NtQVpsODhaR2gzRlhIMFA0eUF3SHpfNUM5VEEtVnJKTFBHR2h4WWRiUDFjbzhpTFJmcmMya2l0ckFXa2dSU01rMmdpekpPYzZ3cGtsR2lLaF9WZVFCNTRwempJTGxfVVBGcXBGVnZEa1ZSME56QzdNVjNEQU5tV21UQ19LQ054Y01NOFF2UXB0OHpMSC1wUV9TVXpCbHNIdG55a9IBzgFBVV95cUxOeGFJWmxtUUxDSTdxQnBxNjA3c0RZa1pDNVNFa0VSakRYSkNSNDdieWI4UC01cVhTc0RqQ2V2WDVMS0I3cDBnQXFILS1oRWdrVnBYaUtZTGszUkhqNHptcEJDby1hN1JGSmRCeWlMRVllWFhjS2JKc0ZYenpOQzlMMWdhTUZWejVNSVNKS2gxYzVhRDBUZXJiRGlDZUVEX1doZlBMa1o3ZWlsUEd1MjNnakhhQ3phY2V1NkszaWFmNzlMakU3SU83LXI2YjlkZw?oc=5"
+---
