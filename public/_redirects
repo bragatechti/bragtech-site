@@ -1,0 +1,25 @@
+# URLs do site antigo (Shopify) -> páginas novas equivalentes (301 permanente)
+/password            /                301
+/password/           /                301
+/pages/contact       /contato/        301
+/pages/contato       /contato/        301
+/pages/about         /sobre/          301
+/pages/about-us      /sobre/          301
+/pages/sobre         /sobre/          301
+/pages/*             /                301
+/blogs/*             /artigos/        301
+/blog                /artigos/        301
+/blog/*              /artigos/        301
+/policies/privacy-policy  /privacidade/  301
+/policies/*          /privacidade/    301
+/products            /                301
+/products/*          /                301
+/collections         /                301
+/collections/*       /                301
+/cart                /                301
+/cart/*              /                301
+/account             /                301
+/account/*           /                301
+/search              /                301
+/checkout            /                301
+/checkouts/*         /                301

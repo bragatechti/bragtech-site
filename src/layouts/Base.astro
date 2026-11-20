@@ -2,12 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, description, type, image } = Astro.props;
+const { title, description, type, image, schema } = Astro.props;
 ---
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <BaseHead title={title} description={description} type={type} image={image} />
+    <BaseHead title={title} description={description} type={type} image={image} schema={schema} />
     <!-- Cloudflare Web Analytics (sem cookies) -->
     <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d017e5a1867f4fbaabf96562099c7650"}'></script>
   </head>

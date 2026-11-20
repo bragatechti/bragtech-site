@@ -14,8 +14,24 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const minutes = readingTime(post.body ?? '');
+const url = new URL(`/artigos/${post.id}/`, Astro.site).href;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title.slice(0, 110),
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: { '@type': 'Person', name: 'Raul Bragagnolo', url: 'https://www.linkedin.com/in/joseraulbragagnolofilho/' },
+  publisher: { '@type': 'Organization', name: 'BragaTech', url: `${Astro.site}`, logo: { '@type': 'ImageObject', url: new URL('/logo-full.webp', Astro.site).href } },
+  image: [post.data.cover && post.data.cover.startsWith('https://') ? post.data.cover : new URL('/logo-full.webp', Astro.site).href],
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  inLanguage: 'pt-BR',
+  articleSection: post.data.category,
+  keywords: post.data.tags.join(', '),
+};
 ---
-<Base title={post.data.title} description={post.data.description} type="article" image={post.data.cover}>
+<Base title={post.data.title} description={post.data.description} type="article" image={post.data.cover} schema={schema}>
   <article class="article">
     <div class="page-head" style="padding-bottom:0">
       <div class="meta"><Badge category={post.data.category} />{post.data.category === 'politica' && <span class="badge" style="--c:#ef4444">Opinião</span>}<span>Por <strong>Raul Bragagnolo</strong></span><span class="dot"></span><FormattedDate date={post.data.pubDate} /><span class="dot"></span><span>{minutes} min de leitura</span></div>
