@@ -5,4 +5,5 @@ pubDate: 2026-11-09T13:00:00Z
 category: ia
 source: "OpenAI News"
 sourceUrl: "https://openai.com/index/control-room"
+image: "https://images.ctfassets.net/kftzwdyauwt9/7CRGR1hiay1UfPVqjUSdAk/da9d8e1e61347fdae6d40e0a72962731/introducing-control-room-social.png?w=1600&h=900&fit=fill"
 ---
