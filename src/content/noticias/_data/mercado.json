@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-22T09:59:18Z",
+  "updated": "2026-11-22T21:56:11Z",
   "moedas": [
     {
       "id": "USD-BRL",
       "nome": "Dólar",
-      "valor": 5.9074,
-      "var": 0.04
+      "valor": 5.9488,
+      "var": 0.74
     },
     {
       "id": "EUR-BRL",
