@@ -9,8 +9,8 @@ const bloqueado = () =>
   );
 
 function buscadorVerificado(request, cf) {
-  if (cf.verifiedBotCategory) return true; // classificado pelo Cloudflare como robô verificado
-  if (cf.botManagement && cf.botManagement.verifiedBot) return true;
+  // Só buscadores (Google, Bing etc.). Outros robôs verificados (monitoramento, IA, SEO) continuam bloqueados.
+  if (cf.verifiedBotCategory === 'Search Engine Crawler') return true;
   const ua = (request.headers.get('User-Agent') || '').toLowerCase();
   const asn = Number(cf.asn);
   if (/googlebot|google-inspectiontool|googleother|adsbot-google|mediapartners-google|storebot-google/.test(ua) && asn === 15169) return true; // rede do Google
